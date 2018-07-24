@@ -50,18 +50,15 @@ export default class Dashboard extends Component {
         <div  className="tableDiv"   key={i} >
          <div className="styleTable">
             <table className="table">
-                <tbody>
-                        <tr>
-                            {/* <th >
-                            </th> */}
-                        </tr>
-                        <tr >
-                            <td >{e.organization}</td>
-                            <td >{e.services_offered}</td>
-                            <td >{e.address}</td>
-                            <td >{e.hours}</td>
-                            <td >{e.phone}</td>
-                            <td >{e.maplink}</td>
+                <tbody className="tbody">
+                        
+                        <tr className="trMain">
+                            <td className="tdStyle1" >{e.organization}</td>
+                            <td className="tdStyle2" >{e.services_offered}</td>
+                            <td className="tdStyle3" >{e.address}</td>
+                            <td className="tdStyle4" >{e.hours}</td>
+                            <td className="tdStyle5" >{e.phone}</td>
+                            <td className="tdStyle6" >{e.maplink}</td>
                         </tr>
                 </tbody>
             </table>
@@ -80,16 +77,16 @@ export default class Dashboard extends Component {
             <input className='inputSearch' placeholder="Search"
             onChange={(event) => this.handleInput(event.target.value)}/>
 
-            <table className="table table-striped" >
+            <table className="table" >
                 <thead>
                     {/* table headers */}
                     <tr>
-                        <th scope="col">Organization</th>
-                        <th scope="col">Services Offered</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Hours</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col">Maplink</th>
+                        <th scope="colgroup">Organization</th>
+                        <th scope="colgroup">Services Offered</th>
+                        <th scope="colgroup">Website</th>
+                        <th scope="colgroup">Hours</th>
+                        <th scope="colgroup">Phone Number</th>
+                        <th scope="colgroup">Maplink</th>
                     </tr>
                 </thead>
             </table>

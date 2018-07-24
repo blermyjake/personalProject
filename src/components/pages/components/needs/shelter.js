@@ -17,9 +17,9 @@ class Skills extends Component {
 
                 
 
-               <p>
+               
                <Dashboard />
-               </p>
+               
             </div>
         );
     }

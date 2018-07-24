@@ -4,8 +4,9 @@ import Have from './have'
 class Donations extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
             <Have />
+            <div className="container-fluid2">
             <h1>Clothes, food, money...</h1>
             <hr/>
 
@@ -24,7 +25,7 @@ class Donations extends Component {
             <p>    
             By donating clothing you’re helping to raise a homeless individual's quality of life and self perception.
             </p>
-                
+        </div>
     </div>
         );
     }

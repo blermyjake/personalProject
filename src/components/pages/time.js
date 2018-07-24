@@ -4,8 +4,10 @@ import Have from './have'
 class Time extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
             <Have />
+            <div className="container-fluid2">
+
             <h1>Volunteer your Time</h1>
             <hr/>
 
@@ -18,7 +20,7 @@ class Time extends Component {
 Donate your time through mentorship and volunteering
  opportunities to help educate the homeless.
     </p>
-                
+                </div>
             </div>
         );
     }

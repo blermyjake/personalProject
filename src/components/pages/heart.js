@@ -4,8 +4,10 @@ import Have from './have'
 class Heart extends Component {
     render() {
         return (
-            <div className="container-fluid">
-                 <Have />
+            <div className="haveMain">
+            <Have />
+            <div className="container-fluid2">
+
                  <h1>The Heart</h1>
             <hr/>
 
@@ -47,6 +49,7 @@ class Heart extends Component {
     <p>
     9. Advocate. Call your local homeless shelters to find out what items are needed, then contact your local scout troops or civic organizations to organize food drives or other fundraising events to pull those items together. Follow local politics and speak up at town council meetings on issues of homelessness and programs for the homeless. Write editorial letters to your local newspaper about the issue of homelessness in your community and what people can do to help.
     </p>
+            </div>
             </div>
         );
     }

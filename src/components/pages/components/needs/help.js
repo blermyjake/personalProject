@@ -21,9 +21,9 @@ class Help extends Component {
 
                 
 
-               <p>
+               
                <Dashboard />
-               </p>
+               
             </div>
         );
     }

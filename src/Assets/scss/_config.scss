@@ -37,7 +37,79 @@ a {
 }
 
 
-// .container-fluid {
-//     line-height: 24px;
-// }
+.container-fluid {
+    line-height: 24px;
+    margin: 24px;
+}
+
+.container-fluid2 {
+    margin: 35px;
+}
+
+.container-fluid3 {
+    margin: 35px;
+}
+
+.styleTable {
+    border: 1px solid black;
+    table-layout: fixed;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // word-wrap: break-word;
+}
+
+.table {
+    margin: 0px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+// .table 
+
+.trMain {
+    width: 100%;
+}
+
+.tableDiv:nth-child(even){
+    background-color: rgb(228, 227, 227);
+
+}
+
+
+
+.tdStyle1 {
+    border: 1px solid black;
+    width: 10%;
+}
+
+.tdStyle2 {
+    border: 1px solid black;
+    width: 20%;
+}
+
+.tdStyle3 {
+    border: 1px solid black;
+    width: 20%;  
+}
+
+.tdStyle4 {
+    border: 1px solid black;
+    width: 10%;
+}
+
+.tdStyle5 {
+    border: 1px solid black;
+    width: 10%;
+    
+}
+
+.tdStyle6 {
+    border: 1px solid black;
+    width: 30%;
+    
+}
+
+
+
 

@@ -6,8 +6,10 @@ import ClothingMap from '../maps/ClothingMap'
 class Clothing extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
             <Need />
+            <div className="container-fluid2">
+
             <h1>Clothing</h1>
             <hr/>
 
@@ -15,15 +17,16 @@ class Clothing extends Component {
                     I Need
                 </h2>
                 
-                <div className="container-fluid">
+                <div >
                 <ClothingMap/>
                 </div>
-
+</div>
                 
-
-               <p>
+            <div className="container-fluid3">
+              
                <Dashboard />
-               </p>
+               
+               </div>
             </div>
         );
     }

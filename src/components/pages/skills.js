@@ -4,8 +4,9 @@ import Have from './have'
 class Skills extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
             <Have />
+            <div className="container-fluid2">
             <h1>Skills</h1>
             <hr/>
 
@@ -16,7 +17,7 @@ class Skills extends Component {
     <p>
     Teach, lend a hand, build a house, lend medical expertise...
     </p>
-                
+                </div>
             </div>
         );
     }
