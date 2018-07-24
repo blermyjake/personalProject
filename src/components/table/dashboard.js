@@ -37,7 +37,7 @@ export default class Dashboard extends Component {
 
   render() {  
       const { input } = this.state;
-      console.log(this.state);
+    //   console.log(this.state);
 
     //   console.log(allCenters);
         // console.log(allData);
@@ -76,21 +76,23 @@ export default class Dashboard extends Component {
             <hr/>
             <input className='inputSearch' placeholder="Search"
             onChange={(event) => this.handleInput(event.target.value)}/>
-
-            <table className="table" >
+        <div className="tabHeadTop">
+            <table className="tableHead" >
                 <thead>
                     {/* table headers */}
                     <tr>
-                        <th scope="colgroup">Organization</th>
-                        <th scope="colgroup">Services Offered</th>
-                        <th scope="colgroup">Website</th>
-                        <th scope="colgroup">Hours</th>
-                        <th scope="colgroup">Phone Number</th>
-                        <th scope="colgroup">Maplink</th>
+                        <th className="tabHead1">Organization</th>
+                        <th className="tabHead2">Services Offered</th>
+                        <th className="tabHead3">Website</th>
+                        <th className="tabHead4">Hours</th>
+                        <th className="tabHead5">Phone Number</th>
+                        <th className="tabHead6">Maplink</th>
                     </tr>
                 </thead>
             </table>
+            </div>
             {allData}
+            
         </div>
     )
     

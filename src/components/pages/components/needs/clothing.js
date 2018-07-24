@@ -7,20 +7,19 @@ class Clothing extends Component {
     render() {
         return (
             <div className="haveMain">
+
             <Need />
+
             <div className="container-fluid2">
 
             <h1>Clothing</h1>
             <hr/>
 
-                <h2>
-                    I Need
-                </h2>
                 
-                <div >
+                <div >      
                 <ClothingMap/>
                 </div>
-</div>
+            </div>
                 
             <div className="container-fluid3">
               

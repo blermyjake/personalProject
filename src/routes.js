@@ -17,6 +17,8 @@ import Shelter from './components/pages/components/needs/shelter';
 import Food from './components/pages/components/needs/food';
 import Clothing from './components/pages/components/needs/clothing';
 import Help from './components/pages/components/needs/help';
+import Login from './components/pages/components/login/login';
+import User from './components/pages/components/user/user';
 
 
 
@@ -34,6 +36,10 @@ export default (
         <Route path='/need/food' component={Food} />
         <Route path='/need/clothing' component={Clothing} />
         <Route path='/need/help' component={Help} />
+
+        <Route path='/login' component={Login} />
+
+        <Route path='/user' component={User} />
 
         <Route path='/about' component={About} />
 

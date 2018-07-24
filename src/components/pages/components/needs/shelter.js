@@ -6,19 +6,24 @@ import ShelterMap from '../../components/maps/ShelterMap';
 class Skills extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
+                
                 <Need />
-            <h1>Shelter</h1>
-            <hr/>
+           
+                <div className="container-fluid2">
 
-                <div className="container-fluid">
-                <ShelterMap/>
+                    <h1>Shelter</h1>
+                    <hr/>
+
+                    <div>
+                        <ShelterMap/>
+                    </div>
+
                 </div>
 
-                
-
-               
-               <Dashboard />
+                <div className="container-fluid3">
+                  <Dashboard />
+               </div>
                
             </div>
         );

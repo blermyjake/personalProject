@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-// import Dashboard from '../../../table/dashboard';
+import Dashboard from '../../../table/dashboard';
 
-class Login extends Component {
+class User extends Component {
     render() {
         return (
             <div className="container-fluid">
             
-            <h1>About us</h1>
+            <h1>Profile</h1>
             <hr/>
 
                 <h2>
-                    Login
+                    Profile
                 </h2>
 
-    <p>
-Login Page    </p>
+    <div className="container-fluid3">
+                  <Dashboard />
+               </div>
                 
             </div>
         );
     }
 }
 
-export default Login;
+export default User;

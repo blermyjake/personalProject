@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 class Header extends Component {
     render() {
+        // console.log(process.env.REACT_APP_LOGIN)
         return (
             <header>
                <div className="logo">
@@ -27,8 +28,12 @@ class Header extends Component {
                         <Link to="/about">About</Link>
                         {/* <a href="#">Contact</a> */}
                     </li>
+
+                    <li className='User'>
+                        <Link to="/user">Profile</Link>
+                    </li>
                     <li className='Login'>
-                        <Link to="/login">Login</Link>
+                        <a href={process.env.REACT_APP_LOGIN}>Login</a>
                         {/* <a href="#">Contact</a> */}
                     </li>
                 </ul>

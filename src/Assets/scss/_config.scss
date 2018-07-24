@@ -59,10 +59,16 @@ a {
     // word-wrap: break-word;
 }
 
+.tableDiv {
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
 .table {
     margin: 0px;
     table-layout: fixed;
     width: 100%;
+    // font-size: 1.3vw;
 }
 
 // .table 
@@ -73,14 +79,15 @@ a {
 
 .tableDiv:nth-child(even){
     background-color: rgb(228, 227, 227);
-
 }
+
+
 
 
 
 .tdStyle1 {
     border: 1px solid black;
-    width: 10%;
+    width: 15%;
 }
 
 .tdStyle2 {
@@ -90,7 +97,7 @@ a {
 
 .tdStyle3 {
     border: 1px solid black;
-    width: 20%;  
+    width: 15%;  
 }
 
 .tdStyle4 {
@@ -100,15 +107,50 @@ a {
 
 .tdStyle5 {
     border: 1px solid black;
-    width: 10%;
-    
+    width: 10%;   
 }
 
 .tdStyle6 {
     border: 1px solid black;
-    width: 30%;
+    width: 30%;    
+}
+
+.tableHead {
+    width: 100%;
+    // border: 1px solid black;
+    // text-align: center;
+    word-wrap: break-word;
+    font-size: 1.4vw;
+    justify-content: center;
     
 }
+
+.tabHead1 {
+    border: 1.5px solid black;
+    width: 15%;
+}
+.tabHead2 {
+    border: 1.5px solid black;
+    width: 20%;
+}
+.tabHead3 {
+    border: 1.5px solid black;
+    width: 15%;
+}
+.tabHead4 {
+    border: 1.5px solid black;
+    width: 10%;
+}
+.tabHead5 {
+    border: 1.5px solid black;
+    width: 10%;
+}
+.tabHead6 {
+    border: 1.5px solid black;
+    width: 30%;
+}
+
+
 
 
 

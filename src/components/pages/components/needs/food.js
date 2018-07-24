@@ -5,24 +5,24 @@ import FoodMap from '../maps/FoodMap';
 
 class Food extends Component {
     render() {
-        console.log(Dashboard);
+        // console.log(Dashboard);
         return (
-            <div className="container-fluid">
+            <div className="haveMain">
+
             <Need />
-            <h1>Food</h1>
-            <hr/>
 
-                <h2>
-                    I Need
-                </h2>
-
-                <div className="container-fluid">
+            <div className="container-fluid2">
+                <h1>Food</h1>
+                <hr/>
+            
+                <div>
                     <FoodMap/>
                 </div>
+            </div>
                 
-                <hr/>
-                <Dashboard />
-                
+            <div className="container-fluid3">
+                  <Dashboard />
+               </div>
             </div>
         );
     }

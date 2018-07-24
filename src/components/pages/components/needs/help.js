@@ -6,24 +6,24 @@ import HelpMap from '../maps/HelpMap';
 class Help extends Component {
     render() {
         return (
-            <div className="container-fluid">
+
+            <div className="haveMain">
+            
             <Need />
+
+             <div className="container-fluid2">
             <h1>Addiction Recovery</h1>
             <hr/>
 
-                <h2>
-                    I Need
-                </h2>
-                
-                <div className="container-fluid">
-                <HelpMap/>
+ 
+                <div>
+                    <HelpMap/>
                 </div>
-
-                
-
-               
-               <Dashboard />
-               
+            </div>
+                  
+               <div className="container-fluid3">
+                  <Dashboard />
+               </div>
             </div>
         );
     }
