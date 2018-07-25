@@ -1,0 +1,1 @@
+SELECT * FROM centers WHERE id = 11;

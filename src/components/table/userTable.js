@@ -4,27 +4,27 @@ import axios from 'axios';
 import '../../Assets/css/default.min.css';
 
 
-export default class Dashboard extends Component {
+export default class UserTable extends Component {
     constructor(props){
       super(props)
 
       this.state = {
-        allCenters: [],
+        myData: [],
         input: ''
       };
 
-      this.getRequest = this.getRequest.bind(this);
+      this.getUser = this.getUser.bind(this);
       this.handleInput = this.handleInput.bind(this);
     //   this.deleteHome = this.deleteHome.bind(this);
     }
 
     componentDidMount() {
-      this.getRequest();
+      this.getUser();
     }
     
-    getRequest() {
-        axios.get("http://localhost:4000/api/centers").then(res => {
-          this.setState({ allCenters: res.data });
+    getUser() {
+        axios.get("http://localhost:4000/api/userData").then(res => {
+          this.setState({ myData: res.data });
         });
       }
 
@@ -43,7 +43,7 @@ export default class Dashboard extends Component {
         // console.log(allData);
     
       
-    let allData = this.state.allCenters.filter(e => e.services_offered.includes(input)).map((e, i) => 
+    let thisUserData = this.state.myData.map((e, i) => 
     (
         
         // BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3"
@@ -93,7 +93,7 @@ export default class Dashboard extends Component {
                 </thead>
             </table>
             </div>
-            {allData}
+            {thisUserData}
             
         </div>
     )
@@ -101,3 +101,37 @@ export default class Dashboard extends Component {
   }
 }
 // }
+
+
+
+
+
+
+
+// export default class Table extends Component {
+//     contructor(props){
+//         super(props)
+        
+
+//         this.state = {
+//             organization: 'Organization',
+//             services: "Services Offered",
+//             address: "Address",
+//             hours: "Hours",
+//             maplink: "Maplink",
+//             phone: "Phone Number"
+
+//         };
+
+//     }
+
+//     render() {
+//         return (
+//             <div >
+                
+//             </div>
+//         );
+//     }
+// }
+
+// export default Table;

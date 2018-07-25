@@ -42,6 +42,13 @@ class Need extends Component {
                         <Link to="/need/help" >Help</Link>
                         </button>
 
+
+
+
+
+
+
+
                 </div>    
                 <hr/>
             <p>

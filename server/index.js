@@ -47,12 +47,38 @@ passport.use( new Auth0Strategy({
 ));
 // serialUser is what properties from the user we want back.
 passport.serializeUser((user, done) => {
+    console.log(user)
    done(null, { clientID: user.id, email: user._json.email, name: user._json.name });
 });
 // logic to be done with this new version of user.
 passport.deserializeUser((obj, done) => {
    done( null, obj);
 });
+
+
+passport.serializeUser((user, done) => {
+    app
+      .get("db")
+      .auth.getUserAuthid(user.id)
+      .then(response => {
+        if (!response[0]) {
+          app
+            .get("db")
+            .auth.addUserAuthid([user.name, user.email])
+            .then(res => {
+              return done(null, res[0]);
+            })
+            .catch(err => console.log(err));
+        } else {
+          return done(null, response[0]);
+        }
+      })
+      .catch(err => console.log(err));
+  });
+  passport.deserializeUser((user, done) => {
+    return done(null, user);
+  });
+
 
 // endpoints
 app.get('/login', 
@@ -62,7 +88,8 @@ passport.authenticate('auth0',
     )
 );
 
-app.get('/user', (req, res, next) => {
+app.get('/', (req, res, next) => {
+    console.log("hit")
     if( !req.user ) {
       res.redirect('/login')
     } else {
@@ -70,11 +97,14 @@ app.get('/user', (req, res, next) => {
     }
   });
 
+
+
 // app.get('/api/test', (req, res, next) => {
 //     res.status(200).send("It's Working!")
 // });
 
 app.get('/api/centers', controller.getAll)
+app.get('/api/userData', controller.getMyData)
 
 
 
