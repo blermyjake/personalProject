@@ -11,7 +11,8 @@ export default class UpdateUser extends Component {
           website: '',
           hours: '',
           phone: 0,
-          maplink: ''
+          maplink: '',
+          userid: 0
         };
     
   
@@ -22,6 +23,7 @@ export default class UpdateUser extends Component {
     this.handleHours = this.handleHours.bind(this);
     this.handlePhone = this.handlePhone.bind(this);
     this.handleMapLink = this.handleMapLink.bind(this);
+    this.handleId = this.handleId.bind(this);
 
 
     this.addCenter = this.addCenter.bind(this);
@@ -53,9 +55,14 @@ export default class UpdateUser extends Component {
         this.setState({maplink: maplink})
       }
 
-    
-    addCenter(organization, services, website, hours, phone, maplink) {
-      axios.post("/api/userData", {organization, services, website, hours, phone, maplink}).then(res =>
+      handleId(userid){
+        this.setState({userid: userid})
+      }
+
+    // Get the currents users id
+    // send the userid with request and update on db
+    addCenter(organization, services, website, hours, phone, maplink, userid) {
+      axios.post("/api/userData", {organization, services, website, hours, phone, maplink, userid}).then(res =>
         console.log(res))
         // this.setState({ 
         //   homeListings: res.data });
@@ -63,15 +70,16 @@ export default class UpdateUser extends Component {
 
 
     handleClickNewData(){
-    let {organization, services, website, hours, phone, maplink} = this.state;
-    this.addCenter(organization, services, website, hours, phone, maplink);
+    let {organization, services, website, hours, phone, maplink, userid} = this.state;
+    this.addCenter(organization, services, website, hours, phone, maplink, userid);
     this.setState = {
         organization: '',
         services: '',
         website: '',
         hours: '',
         phone: 0,
-        maplink: ''
+        maplink: '',
+        userid: 0
       }
     }
 
@@ -80,11 +88,11 @@ export default class UpdateUser extends Component {
     //   let { organization, services, website, hours, phone, maplink} = this.state;
         return (
           <div>
-            <h2 className='title'></h2>
+            {/* <h2 className='title'>Update it</h2> */}
             <div className='sub_box'>
             Add or Update Info
             <hr/>
-            <Link to='/user'>
+            <Link to='/user/'>
             <button className="CancelButton">Cancel</button>
             </Link>
 
@@ -93,6 +101,9 @@ export default class UpdateUser extends Component {
             Complete
           </button>
         </Link>
+
+        
+        <button className='Delete'>Delete</button>
     
           <hr/>
           <div className="input fields">
@@ -105,8 +116,9 @@ export default class UpdateUser extends Component {
             <input className='inputHours' placeholder="Hours" onChange={(event) => this.handleHours (event.target.value)}/>
             <hr/>
             <input className='inputPhone' placeholder="Phone" onChange={(event) => this.handlePhone (event.target.value)}/>
-
             <input className='inputMap' placeholder="Maplink" onChange={(event) => this.handleMapLink (event.target.value)}/>
+
+             <input className='inputId' placeholder="User Id" onChange={(event) => this.handleId(event.target.value)}/>
             <hr/>
             </div>
           

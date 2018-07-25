@@ -1,0 +1,1 @@
+INSERT INTO userinfo (name, authid, email) VALUES ($1, $2, $3)

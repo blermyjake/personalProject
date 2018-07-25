@@ -45,26 +45,16 @@ passport.use( new Auth0Strategy({
     done(null, profile);
 }
 ));
-// serialUser is what properties from the user we want back.
-passport.serializeUser((user, done) => {
-    console.log(user)
-   done(null, { clientID: user.id, email: user._json.email, name: user._json.name });
-});
-// logic to be done with this new version of user.
-passport.deserializeUser((obj, done) => {
-   done( null, obj);
-});
-
 
 passport.serializeUser((user, done) => {
     app
       .get("db")
-      .auth.getUserAuthid(user.id)
+      .auth.getUserAuthId(user.user_id)
       .then(response => {
         if (!response[0]) {
           app
             .get("db")
-            .auth.addUserAuthid([user.name, user.email])
+            .auth.addUserAuthId([user.displayName, user.user_id, user._json.email])
             .then(res => {
               return done(null, res[0]);
             })
@@ -75,6 +65,8 @@ passport.serializeUser((user, done) => {
       })
       .catch(err => console.log(err));
   });
+
+
   passport.deserializeUser((user, done) => {
     return done(null, user);
   });
@@ -103,8 +95,12 @@ app.get('/', (req, res, next) => {
 //     res.status(200).send("It's Working!")
 // });
 
+// user endpoint
+app.get("/api/getUser", controller.getUser)
+
+
 app.get('/api/centers', controller.getAll)
-app.get('/api/userData', controller.getMyData)
+app.get('/api/userData/:id', controller.getMyData)
 app.post('/api/userData', controller.addCenter)
 
 

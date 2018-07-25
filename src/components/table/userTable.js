@@ -10,21 +10,32 @@ export default class UserTable extends Component {
 
       this.state = {
         myData: [],
+        userId: 0,
         input: ''
       };
 
-    //   this.getUser = this.getUser.bind(this);
+      this.getUser = this.getUser.bind(this);
       this.getMyData = this.getMyData.bind(this);
       this.handleInput = this.handleInput.bind(this);
     //   this.deleteHome = this.deleteHome.bind(this);
     }
 
     componentDidMount() {
-      this.getMyData();
+        this.getUser()
+    }
+
+    getUser(){
+        axios.get("/api/getUser").then(res => {
+            this.setState({
+                userId: res.data.userid
+            })
+        }).then(() => {
+            this.getMyData(this.state.userId)
+        })
     }
     
-    getMyData() {
-        axios.get("http://localhost:4000/api/userData").then(res => {
+    getMyData(id) {
+        axios.get(`http://localhost:4000/api/userData/${id}`).then(res => {
           this.setState({ myData: res.data });
         });
       }
@@ -54,12 +65,13 @@ export default class UserTable extends Component {
                 <tbody className="tbody">
                         
                         <tr className="trMain">
-                            <td className="tdStyle1" >{e.organization}</td>
-                            <td className="tdStyle2" >{e.services_offered}</td>
-                            <td className="tdStyle3" >{e.address}</td>
-                            <td className="tdStyle4" >{e.hours}</td>
-                            <td className="tdStyle5" >{e.phone}</td>
-                            <td className="tdStyle6" >{e.maplink}</td>
+                            <td className="tdStyle1User" >{e.organization}</td>
+                            <td className="tdStyle2User" >{e.services_offered}</td>
+                            <td className="tdStyle3User" >{e.address}</td>
+                            <td className="tdStyle4User" >{e.hours}</td>
+                            <td className="tdStyle5User" >{e.phone}</td>
+                            <td className="tdStyle6User" >{e.maplink}</td>
+                            <td className="tdStyle7User" >{e.userid}</td>
                         </tr>
                 </tbody>
             </table>
@@ -84,12 +96,13 @@ export default class UserTable extends Component {
                 <thead>
                     {/* table headers */}
                     <tr>
-                        <th className="tabHead1">Organization</th>
-                        <th className="tabHead2">Services Offered</th>
-                        <th className="tabHead3">Website</th>
-                        <th className="tabHead4">Hours</th>
-                        <th className="tabHead5">Phone Number</th>
-                        <th className="tabHead6">Maplink</th>
+                        <th className="tabHead1User">Organization</th>
+                        <th className="tabHead2User">Services Offered</th>
+                        <th className="tabHead3User">Website</th>
+                        <th className="tabHead4User">Hours</th>
+                        <th className="tabHead5User">Phone Number</th>
+                        <th className="tabHead6User">Maplink</th>
+                        <th className="tabHead7User">User Id</th>
                     </tr>
                 </thead>
             </table>

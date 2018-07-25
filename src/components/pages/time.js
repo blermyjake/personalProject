@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Have from './have'
+import Have from './have';
+import Dashboard from '../table/dashboard';
 
 class Time extends Component {
     render() {
@@ -11,16 +12,22 @@ class Time extends Component {
             <h1>Volunteer your Time</h1>
             <hr/>
 
-                <h3>
+                {/* <h3>
                 HELP EDUCATE
-                </h3>
+                </h3> */}
 
-    <p>
+    <h3>
 
 Donate your time through mentorship and volunteering
- opportunities to help educate the homeless.
-    </p>
+ opportunities. Search to find the right place for you.
+    </h3>
                 </div>
+
+                <div className="container-fluid3">
+              
+              <Dashboard />
+              
+              </div>
             </div>
         );
     }

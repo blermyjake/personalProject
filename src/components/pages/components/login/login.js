@@ -6,15 +6,12 @@ class Login extends Component {
         return (
             <div className="container-fluid">
             
-            <h1>About us</h1>
+            <h1>Oops! We hit a snag. Try logging in again...</h1>
             <hr/>
 
-                <h2>
-                    Login
-                </h2>
+                
 
-    <p>
-Login Page    </p>
+
                 
             </div>
         );

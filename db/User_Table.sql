@@ -1,1 +1,1 @@
-SELECT * FROM centers WHERE id = 2;
+SELECT * FROM centers WHERE userid = $1

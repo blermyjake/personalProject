@@ -72,7 +72,7 @@ export default class Dashboard extends Component {
 
 
         <div>
-            <h2>Help Center Information</h2>
+            {/* <h2>Help Center Information</h2> */}
             <hr/>
             <input className='inputSearch' placeholder="Search"
             onChange={(event) => this.handleInput(event.target.value)}/>

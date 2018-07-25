@@ -5,5 +5,8 @@ CREATE TABLE centers (
     address text,
     hours text,
     phone text,
-    maplink text
+    maplink text,
+    userid integer 
 );
+
+-- REFERENCES centers(id) ON UPDATE CASCADE
