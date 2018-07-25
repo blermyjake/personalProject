@@ -19,7 +19,18 @@ getMyData: (req, res, next) => {
     })
 },
 
-
+addCenter: (req, res, next) => {
+    console.log(req.body)
+    const { organization, services, website, hours, phone, maplink } = req.body;
+    const db = req.app.get('db');
+    // refers to sql file
+    // object?????
+    db.Add_Center([organization, services, website, hours, phone, maplink])
+    .then(response =>{
+        res.status(200).send(response);
+    })
+    .catch(err => res.status(500).send(err))
+  },
 
 getUser: (req, res) => {
 
@@ -35,6 +46,12 @@ getUser: (req, res) => {
     }
   }
 }
+
+
+
+
+
+
 // const loggedIn = function(){
 //     if (!req.user){
 //         redirect ('/login')

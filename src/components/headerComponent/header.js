@@ -29,9 +29,9 @@ class Header extends Component {
                         {/* <a href="#">Contact</a> */}
                     </li>
 
-                    {/* <li className='User'>
+                    <li className='User'>
                         <Link to="/user">Profile</Link>
-                    </li> */}
+                    </li>
                     <li className='Login'>
                         <a href={process.env.REACT_APP_LOGIN}>Login</a>
                         {/* <a href="#">Contact</a> */}

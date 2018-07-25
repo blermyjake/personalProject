@@ -105,6 +105,7 @@ app.get('/', (req, res, next) => {
 
 app.get('/api/centers', controller.getAll)
 app.get('/api/userData', controller.getMyData)
+app.post('/api/userData', controller.addCenter)
 
 
 

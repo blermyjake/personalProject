@@ -13,16 +13,17 @@ export default class UserTable extends Component {
         input: ''
       };
 
-      this.getUser = this.getUser.bind(this);
+    //   this.getUser = this.getUser.bind(this);
+      this.getMyData = this.getMyData.bind(this);
       this.handleInput = this.handleInput.bind(this);
     //   this.deleteHome = this.deleteHome.bind(this);
     }
 
     componentDidMount() {
-      this.getUser();
+      this.getMyData();
     }
     
-    getUser() {
+    getMyData() {
         axios.get("http://localhost:4000/api/userData").then(res => {
           this.setState({ myData: res.data });
         });

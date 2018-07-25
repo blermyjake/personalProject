@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import Dashboard from '../../../table/dashboard';
 import UserTable from '../../../table/userTable'
+import UpdateUser from './updateUser';
 
 
 class User extends Component {
@@ -16,7 +17,12 @@ class User extends Component {
                     My Center Information
                 </h2>
 
+
+                    <UpdateUser />
+                <hr/>
+
                     <UserTable />
+
                 
             </div>
         );
