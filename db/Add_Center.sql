@@ -1,1 +1,1 @@
-INSERT INTO centers ( organization, services_offered, address, hours, phone, maplink, userid ) VALUES ( $1, $2, $3, $4 ,$5, $6, $7);
+INSERT INTO centers ( organization, services, address, hours, phone, maplink, userid ) VALUES ( $1, $2, $3, $4 ,$5, $6, $7);

@@ -1,7 +1,7 @@
 CREATE TABLE centers (
     id SERIAL PRIMARY KEY,
     organization text,
-    services_offered text,
+    services text,
     address text,
     hours text,
     phone text,

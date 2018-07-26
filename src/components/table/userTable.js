@@ -24,31 +24,7 @@ export default class UserTable extends Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  // componentDidMount() {
-  //     this.getUser()
-  //     console.log("Component Did Mount Fired")
-  // }
-
-  // getUser(){
-  //     axios.get("/api/getUser").then(res => {
-  //         this.setState({
-  //             userId: res.data.userid
-  //         })
-  //         this.getMyData(this.state.userId)
-  //     }).catch(err => console.log(err))
-  // }
-
-  // getMyData = (id) => {
-  //     axios.get(`/api/userData/${id}`).then(res => {
-  //       this.setState({ myData: res.data });
-  //     }).catch(err => console.log(err))
-  //   }
-
-  // deleteUserData = (id) => {
-  //     axios.delete(`/api/userData/${id}`).then(() => {
-  //         this.getMyData(this.state.userId)
-  //     }).catch(err => console.log(err))
-  //   }
+  
 
   //   leave this method here
   handleInput(val) {
@@ -70,7 +46,7 @@ export default class UserTable extends Component {
   render() {
     const { input } = this.state;
     console.log('CHILD STATE: ', this.state);
-    //   console.log(this.state);
+   
 
     //   console.log(allCenters);
     // console.log(allData);
@@ -87,6 +63,8 @@ export default class UserTable extends Component {
                     onClick={() => this.props.deleteUserData(e.id)}
                   />
                 </td>
+
+                
                 {this.state[`${e.organization}${e.id}`] ? (
                   <input
                     value={this.state.text || e.organization}
@@ -96,17 +74,37 @@ export default class UserTable extends Component {
                     }
                     name="organization"
                   />
+
                 ) : (
-                  <td
-                    className="tdStyle1User"
-                    onClick={() =>
+
+                <td className="tdStyle1User" onClick={() =>
                       this.setState({ [e.organization + e.id]: true })
-                    }
-                  >
+                    }>
                     {e.organization}
-                  </td>
+                </td>
                 )}
-                <td className="tdStyle2User">{e.services_offered}</td>
+
+
+                 {this.state[`${e.services}${e.id}`] ? (
+                  <input
+                    value={this.state.text || e.services}
+                    onBlur={event => this.handleEdit(event.target.name, e.id)}
+                    onChange={event =>
+                      this.setState({ text: event.target.value })
+                    }
+                    name="services"
+                  />
+
+                ) : (
+
+                <td className="tdStyle2User" onClick={ () => 
+                    this.setState({ [e.services + e.id]: true })
+                       }> 
+                       {e.services}
+                </td>
+                )}
+
+
                 <td className="tdStyle3User">{e.address}</td>
                 <td className="tdStyle4User">{e.hours}</td>
                 <td className="tdStyle5User">{e.phone}</td>

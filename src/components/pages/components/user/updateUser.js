@@ -71,9 +71,9 @@ export default class UpdateUser extends Component {
         //   homeListings: res.data });
     }
 
-    handleEdit(){
-      
-    }
+    // handleEdit(){
+
+    // }
 
 
 
@@ -106,21 +106,12 @@ export default class UpdateUser extends Component {
             <div className='sub_box'>
             Add or Update Info
             <hr/>
-            <Link to={'/user'}>
-                 <button className="button" onClick={this.handleClickNewData}>
-            Complete
-          </button>
-
-            <Link to='/user/'>
-                 <button className="button" >Update</button>
-            </Link>
-
-        </Link>
+           
 
         
     
     
-          <hr/>
+         
           <div className="inputFields">
             <input className='inputName' placeholder="Organization" onChange={(event) => this.handleOrganization (event.target.value)}/>
             
@@ -136,8 +127,13 @@ export default class UpdateUser extends Component {
             
              <input className='inputId' placeholder="User Id" onChange={(event) => this.handleId(event.target.value)}/>
             </div>
-          
-       
+
+            <hr/>
+            <Link to={'/user'}>
+                <button className="button" onClick={this.handleClickNewData}>
+                    Submit
+                </button>
+            </Link>
 
         </div>
     </div>

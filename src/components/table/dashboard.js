@@ -43,7 +43,7 @@ export default class Dashboard extends Component {
         // console.log(allData);
     
       
-    let allData = this.state.allCenters.filter(e => e.services_offered.includes(input)).map((e, i) => 
+    let allData = this.state.allCenters.filter(e => e.services.includes(input)).map((e, i) => 
     (
         
         // BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3"
@@ -54,7 +54,7 @@ export default class Dashboard extends Component {
                         
                         <tr className="trMain">
                             <td className="tdStyle1" >{e.organization}</td>
-                            <td className="tdStyle2" >{e.services_offered}</td>
+                            <td className="tdStyle2" >{e.services}</td>
                             <td className="tdStyle3" >{e.address}</td>
                             <td className="tdStyle4" >{e.hours}</td>
                             <td className="tdStyle5" >{e.phone}</td>
