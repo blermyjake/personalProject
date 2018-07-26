@@ -42,24 +42,17 @@ getUser: (req, res) => {
           res.status(200).json(person[0]);
         }).catch(err => res.status(500).json(err))
     }
-  }
-}
-
-
-
-
-
-
-// const loggedIn = function(){
-//     if (!req.user){
-//         redirect ('/login')
-//         }else {
-
-//         }
-//         }
     
-//    }
-// getAll,
-// // getUser,
-// getMyData
+  },
 
+  deleteUserData: (req, res, next)=>{
+    const {id} = req.params;
+    const db = req.app.get('db');
+    db.Delete(id)
+    .then(res => {
+        res.status(200).send(res);
+    })
+    .catch(err => res.status(500).send(err))
+
+}
+}

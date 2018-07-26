@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 const axios = require ('axios');
 
+
 export default class UpdateUser extends Component {
     constructor(){
       super()
@@ -28,6 +29,8 @@ export default class UpdateUser extends Component {
 
     this.addCenter = this.addCenter.bind(this);
     this.handleClickNewData = this.handleClickNewData.bind(this);
+
+    this.deleteUserData = this.deleteUserData.bind(this);
 
   }
 
@@ -83,6 +86,12 @@ export default class UpdateUser extends Component {
       }
     }
 
+    deleteUserData(id) {
+      axios.delete(`/api/'/api/userData/${ id }`, {id}).then( res =>{ 
+        this.getMyData();
+    });
+    }
+
 
     render() {
     //   let { organization, services, website, hours, phone, maplink} = this.state;
@@ -93,33 +102,34 @@ export default class UpdateUser extends Component {
             Add or Update Info
             <hr/>
             <Link to='/user/'>
-            <button className="CancelButton">Cancel</button>
+            <button className="button" >Cancel</button>
             </Link>
 
             <Link to={'/user'}>
-          <button className="Add_Info" onClick={this.handleClickNewData}>
+          <button className="button" onClick={this.handleClickNewData}>
             Complete
           </button>
         </Link>
 
         
-        <button className='Delete'>Delete</button>
+        <button className='button' onClick={() => deleteUserData(id)} >Delete</button>
     
           <hr/>
-          <div className="input fields">
+          <div className="inputFields">
             <input className='inputName' placeholder="Organization" onChange={(event) => this.handleOrganization (event.target.value)}/>
-            <hr/>
+            
             <input className='inputServices' placeholder="Services Offered" onChange={(event) => this.handleServices(event.target.value)}/>
-            <hr/>
+            
             <input className='inputWebsite' placeholder="Website" onChange={(event) => this.handleWebsite (event.target.value)}/>
-            <hr/>
+           
             <input className='inputHours' placeholder="Hours" onChange={(event) => this.handleHours (event.target.value)}/>
-            <hr/>
+           
             <input className='inputPhone' placeholder="Phone" onChange={(event) => this.handlePhone (event.target.value)}/>
+            
             <input className='inputMap' placeholder="Maplink" onChange={(event) => this.handleMapLink (event.target.value)}/>
-
+            
              <input className='inputId' placeholder="User Id" onChange={(event) => this.handleId(event.target.value)}/>
-            <hr/>
+            <checkbox />
             </div>
           
             {/* <button onClick={() => axios.put("/api/editdata", reqbody)}>

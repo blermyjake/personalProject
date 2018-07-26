@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../../Assets/css/default.min.css';
+import Checkbox from 'rc-checkbox';
+
+// const ReactDOM = require('react-dom');
 
 
 export default class UserTable extends Component {
@@ -65,6 +68,7 @@ export default class UserTable extends Component {
                 <tbody className="tbody">
                         
                         <tr className="trMain">
+                            <td className="tdStyleCheckBox"> <Checkbox className="checkStyle" /> </td>
                             <td className="tdStyle1User" >{e.organization}</td>
                             <td className="tdStyle2User" >{e.services_offered}</td>
                             <td className="tdStyle3User" >{e.address}</td>
@@ -96,6 +100,7 @@ export default class UserTable extends Component {
                 <thead>
                     {/* table headers */}
                     <tr>
+                        <th className="tabHead0User"></th>
                         <th className="tabHead1User">Organization</th>
                         <th className="tabHead2User">Services Offered</th>
                         <th className="tabHead3User">Website</th>
@@ -103,12 +108,13 @@ export default class UserTable extends Component {
                         <th className="tabHead5User">Phone Number</th>
                         <th className="tabHead6User">Maplink</th>
                         <th className="tabHead7User">User Id</th>
+                       
                     </tr>
                 </thead>
             </table>
             </div>
             {thisUserData}
-            
+           
         </div>
     )
     

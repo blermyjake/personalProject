@@ -1,0 +1,1 @@
+DELETE FROM centers WHERE id = $1

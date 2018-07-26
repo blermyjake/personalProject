@@ -121,8 +121,12 @@ a {
     // text-align: center;
     word-wrap: break-word;
     font-size: 1.4vw;
-    justify-content: center;
-    
+    // justify-content: center;
+    // text-align: center;
+}
+
+th {
+    text-align: center;
 }
 
 .tabHead1 {
@@ -150,7 +154,17 @@ a {
     width: 30%;
 }
 
-// user profile
+// user profile -------------------------------------
+
+.checkStyle {
+    background-position-x: -1%; 
+}
+
+.tdStyleCheckBox {
+    border: 1 px solid black;
+    width: 2.5%;
+}
+
 .tdStyle1User {
     border: 1px solid black;
     width: 15%;
@@ -178,13 +192,17 @@ a {
 
 .tdStyle6User {
     border: 1px solid black;
-    width: 25%;    
+    width: 22.5%;    
 }
 .tdStyle7User {
     border: 1px solid black;
     width: 5%;
 }
 
+.tabHead0User {
+    border: 1.5px solid black;
+    width: 2.5%;
+}
 
 .tabHead1User {
     border: 1.5px solid black;
@@ -208,7 +226,7 @@ a {
 }
 .tabHead6User {
     border: 1.5px solid black;
-    width: 25%;
+    width: 22.5%;
 }
 .tabHead7User{
     border: 1.5px solid black;
@@ -218,3 +236,31 @@ a {
 
 
 
+.inputFields {
+	display: inline-block;
+	// flex-direction: row;
+	// flex-wrap: wrap;
+	// justify-content: space-between;
+	// align-items: flex-start;
+	// align-content: stretch;
+}
+
+
+
+.button {
+    // display: flex;
+	// flex-direction: column;
+	// flex-wrap: wrap;
+	// justify-content: space-between;
+	// align-items: center;
+	// align-content: stretch;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+
+}
+
+// .button:hover {
+
+//     background-color: #e7e7e7; 
+//     color: rgb(230, 0, 0);
+// }

@@ -91,6 +91,7 @@ app.get('/', (req, res, next) => {
 
 
 
+
 // app.get('/api/test', (req, res, next) => {
 //     res.status(200).send("It's Working!")
 // });
@@ -102,7 +103,7 @@ app.get("/api/getUser", controller.getUser)
 app.get('/api/centers', controller.getAll)
 app.get('/api/userData/:id', controller.getMyData)
 app.post('/api/userData', controller.addCenter)
-
+app.delete('/api/userData/:id', controller.deleteUserData);
 
 
 app.listen(port, ()=>{

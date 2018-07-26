@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             <header>
                <div className="logo">
-                LOGO
+                MY LOGO
                </div>
 
             <nav>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
+
+
 // import Heart from './heart';
 // import Time from './time';
 // import Donations from './donations';
@@ -19,24 +21,27 @@ class Have extends Component {
                 
                 <div className="haveDiv">
 
-                        <button>
+                        <button className="button">
+                            <Link to="/have/heart" >The Heart</Link>
+                        </button>
+                        
+                        
+                        <button className="button">
                             <Link to="/have/skills" >Skills</Link>
                         </button>
                        
 
-                        <button>
+                        <button className="button">
                             <Link to="/have/donations" >Dontations</Link>
                         </button>
                         
 
-                        <button>
+                        <button className="button">
                             <Link to="/have/time" >Time</Link>
                         </button>
                         
 
-                        <button>
-                            <Link to="/have/heart" >The Heart</Link>
-                        </button>
+                        
                         
                  
                 </div>
