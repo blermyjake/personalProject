@@ -2,10 +2,52 @@ import React, { Component } from 'react';
 // import Dashboard from '../../../table/dashboard';
 import UserTable from '../../../table/userTable'
 import UpdateUser from './updateUser';
-
+import axios from 'axios';
 
 class User extends Component {
+        constructor(props){
+          super(props)
+    
+          this.state = {
+            myData: [],
+            userId: 0,
+            
+          };
+          this.getUser = this.getUser.bind(this);
+          this.getMyData = this.getMyData.bind(this);
+
+        }
+          componentDidMount() {
+            this.getUser()
+            console.log("Component Did Mount Fired")
+        }
+    
+        getUser(){
+            axios.get("/api/getUser").then(res => {
+                this.setState({
+                    userId: res.data.userid
+                })
+                this.getMyData(this.state.userId)
+            }).catch(err => console.log(err))
+        }
+        
+        getMyData = (id) => {
+            axios.get(`/api/userData/${id}`).then(res => {
+              this.setState({ myData: res.data });
+            }).catch(err => console.log(err))
+          }
+    
+    
+        deleteUserData = (id) => {
+            axios.delete(`/api/userData/${id}`).then(() => {
+                this.getMyData(this.state.userId)
+            }).catch(err => console.log(err))
+          }
+
+
     render() {
+        const { input } = this.state;
+        console.log(this.state);
         return (
             <div className="container-fluid">
             
@@ -18,10 +60,10 @@ class User extends Component {
                 </h2>
 
 
-                    <UpdateUser />
+                    <UpdateUser getMyData={this.getMyData} userId={this.state.userId}/>
                 <hr/>
 
-                    <UserTable />
+                    <UserTable myData={this.state.myData} deleteUserData={this.deleteUserData}/>
 
                 
             </div>
@@ -30,3 +72,9 @@ class User extends Component {
 }
 
 export default User;
+
+
+// Bring all state and methods from userTable to this Component. 
+// Pass the methods to the apporiate components
+// fire the methods the same way as before but just thru props
+// fire getMyData with .then inside of post request

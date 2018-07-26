@@ -3,19 +3,18 @@ module.exports = {
 getAll: (req, res, next ) => {
     const db = req.app.get('db');
 
-    db.Help_Centers()
-    .then(response=>{
+    db.Help_Centers().then(response=>{
         res.status(200).send(response)
         
-    })
+    }).catch(err => console.log(err))
 },
 
 getMyData: (req, res, next) => {
     const db = req.app.get('db');
-    db.User_Table(req.params.id)
-    .then(response=>{
+    console.log("fired")
+    db.User_Table(req.params.id).then(response=>{
         res.status(200).send(response)
-    })
+    }).catch(err => res.status(500).send(err))
 },
 
 addCenter: (req, res, next) => {
@@ -23,15 +22,12 @@ addCenter: (req, res, next) => {
     const db = req.app.get('db');
     // refers to sql file
     // object?????
-    db.Add_Center([organization, services, website, hours, phone, maplink, userid])
-    .then(response =>{
+    db.Add_Center([organization, services, website, hours, phone, maplink, userid]).then(response =>{
         res.status(200).send(response);
-    })
-    .catch(err => res.status(500).send(err))
+    }).catch(err => res.status(500).send(err))
   },
 
 getUser: (req, res) => {
-    console.log(req.user)
     if (!req.user) {
       res.status(401).send()
     } else {
@@ -48,11 +44,9 @@ getUser: (req, res) => {
   deleteUserData: (req, res, next)=>{
     const {id} = req.params;
     const db = req.app.get('db');
-    db.Delete(id)
-    .then(res => {
-        res.status(200).send(res);
-    })
-    .catch(err => res.status(500).send(err))
 
-}
+    db.DeleteE(parseInt(id)).then(results => {
+        res.status(200).send();
+    }).catch(err => console.log(err))
+    }
 }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../../Assets/css/default.min.css';
-import Checkbox from 'rc-checkbox';
+// import Checkbox from 'rc-checkbox';
+import "font-awesome/css/font-awesome.min.css"
 
 // const ReactDOM = require('react-dom');
 
@@ -12,37 +13,49 @@ export default class UserTable extends Component {
       super(props)
 
       this.state = {
-        myData: [],
-        userId: 0,
+        // myData: [],
+        // userId: 0,
         input: ''
       };
+    //   leave input in state
 
-      this.getUser = this.getUser.bind(this);
-      this.getMyData = this.getMyData.bind(this);
-      this.handleInput = this.handleInput.bind(this);
-    //   this.deleteHome = this.deleteHome.bind(this);
-    }
-
-    componentDidMount() {
-        this.getUser()
-    }
-
-    getUser(){
-        axios.get("/api/getUser").then(res => {
-            this.setState({
-                userId: res.data.userid
-            })
-        }).then(() => {
-            this.getMyData(this.state.userId)
-        })
-    }
     
-    getMyData(id) {
-        axios.get(`http://localhost:4000/api/userData/${id}`).then(res => {
-          this.setState({ myData: res.data });
-        });
-      }
 
+    //   this.getUser = this.getUser.bind(this);
+    //   this.getMyData = this.getMyData.bind(this);
+      this.handleInput = this.handleInput.bind(this);
+    
+    }
+
+    // componentDidMount() {
+    //     this.getUser()
+    //     console.log("Component Did Mount Fired")
+    // }
+
+    // getUser(){
+    //     axios.get("/api/getUser").then(res => {
+    //         this.setState({
+    //             userId: res.data.userid
+    //         })
+    //         this.getMyData(this.state.userId)
+    //     }).catch(err => console.log(err))
+    // }
+    
+    // getMyData = (id) => {
+    //     axios.get(`/api/userData/${id}`).then(res => {
+    //       this.setState({ myData: res.data });
+    //     }).catch(err => console.log(err))
+    //   }
+
+
+    // deleteUserData = (id) => {
+    //     axios.delete(`/api/userData/${id}`).then(() => {
+    //         this.getMyData(this.state.userId)
+    //     }).catch(err => console.log(err))
+    //   }
+
+
+    //   leave this method here
     handleInput(val){
           this.setState({
               input: val
@@ -52,35 +65,35 @@ export default class UserTable extends Component {
 
   render() {  
       const { input } = this.state;
+      console.log(this.state);
     //   console.log(this.state);
 
     //   console.log(allCenters);
         // console.log(allData);
     
       
-    let thisUserData = this.state.myData.map((e, i) => 
+    let thisUserData = this.props.myData.map((e, i) => 
     (
         
         // BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3"
-        <div  className="tableDiv"   key={i} >
-         <div className="styleTable">
-            <table className="table">
-                <tbody className="tbody">
-                        
-                        <tr className="trMain">
-                            <td className="tdStyleCheckBox"> <Checkbox className="checkStyle" /> </td>
-                            <td className="tdStyle1User" >{e.organization}</td>
-                            <td className="tdStyle2User" >{e.services_offered}</td>
-                            <td className="tdStyle3User" >{e.address}</td>
-                            <td className="tdStyle4User" >{e.hours}</td>
-                            <td className="tdStyle5User" >{e.phone}</td>
-                            <td className="tdStyle6User" >{e.maplink}</td>
-                            <td className="tdStyle7User" >{e.userid}</td>
-                        </tr>
-                </tbody>
-            </table>
-            </div>
+    <div  className="tableDiv"   key={i} >
+        <div className="styleTable">
+        <table className="table">
+            <tbody className="tbody">   
+                <tr className="trMain">
+                    <td className="tdStyleCheckBox"><i className="fa fa-trash" onClick={() => this.props.deleteUserData(e.id)}></i></td>
+                    <td className="tdStyle1User" >{e.organization}</td>
+                    <td className="tdStyle2User" >{e.services_offered}</td>
+                    <td className="tdStyle3User" >{e.address}</td>
+                    <td className="tdStyle4User" >{e.hours}</td>
+                    <td className="tdStyle5User" >{e.phone}</td>
+                    <td className="tdStyle6User" >{e.maplink}</td>
+                    <td className="tdStyle7User" >{e.userid}</td>
+                </tr>
+            </tbody>
+        </table>
         </div>
+    </div>
         
       ));
     
@@ -120,38 +133,4 @@ export default class UserTable extends Component {
     
   }
 }
-// }
 
-
-
-
-
-
-
-// export default class Table extends Component {
-//     contructor(props){
-//         super(props)
-        
-
-//         this.state = {
-//             organization: 'Organization',
-//             services: "Services Offered",
-//             address: "Address",
-//             hours: "Hours",
-//             maplink: "Maplink",
-//             phone: "Phone Number"
-
-//         };
-
-//     }
-
-//     render() {
-//         return (
-//             <div >
-                
-//             </div>
-//         );
-//     }
-// }
-
-// export default Table;

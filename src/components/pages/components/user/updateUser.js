@@ -30,7 +30,7 @@ export default class UpdateUser extends Component {
     this.addCenter = this.addCenter.bind(this);
     this.handleClickNewData = this.handleClickNewData.bind(this);
 
-    this.deleteUserData = this.deleteUserData.bind(this);
+    // this.deleteUserData = this.deleteUserData.bind(this);
 
   }
 
@@ -66,7 +66,7 @@ export default class UpdateUser extends Component {
     // send the userid with request and update on db
     addCenter(organization, services, website, hours, phone, maplink, userid) {
       axios.post("/api/userData", {organization, services, website, hours, phone, maplink, userid}).then(res =>
-        console.log(res))
+        this.props.getMyData(this.props.userId)).catch(err => console.log(err))
         // this.setState({ 
         //   homeListings: res.data });
     }
@@ -86,11 +86,11 @@ export default class UpdateUser extends Component {
       }
     }
 
-    deleteUserData(id) {
-      axios.delete(`/api/'/api/userData/${ id }`, {id}).then( res =>{ 
-        this.getMyData();
-    });
-    }
+    // deleteUserData(id) {
+    //   axios.delete(`/api/userData/${ id }`).then( res =>{ 
+    //     this.getMyData();
+    // });
+    // }
 
 
     render() {
@@ -112,7 +112,7 @@ export default class UpdateUser extends Component {
         </Link>
 
         
-        <button className='button' onClick={() => deleteUserData(id)} >Delete</button>
+    
     
           <hr/>
           <div className="inputFields">
@@ -129,12 +129,9 @@ export default class UpdateUser extends Component {
             <input className='inputMap' placeholder="Maplink" onChange={(event) => this.handleMapLink (event.target.value)}/>
             
              <input className='inputId' placeholder="User Id" onChange={(event) => this.handleId(event.target.value)}/>
-            <checkbox />
             </div>
           
-            {/* <button onClick={() => axios.put("/api/editdata", reqbody)}>
-          this button updates the db
-        </button> */}
+       
 
         </div>
     </div>

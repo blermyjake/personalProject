@@ -80,6 +80,7 @@ passport.authenticate('auth0',
     )
 );
 
+
 app.get('/', (req, res, next) => {
     console.log("hit")
     if( !req.user ) {
@@ -88,7 +89,6 @@ app.get('/', (req, res, next) => {
         res.status(200).send(req.user);
     }
   });
-
 
 
 
