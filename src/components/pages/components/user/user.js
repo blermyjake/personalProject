@@ -47,7 +47,7 @@ class User extends Component {
 
     render() {
         const { input } = this.state;
-        console.log(this.state);
+        console.log('PARENT STATE: ', this.state);
         return (
             <div className="container-fluid">
             
@@ -63,7 +63,7 @@ class User extends Component {
                     <UpdateUser getMyData={this.getMyData} userId={this.state.userId}/>
                 <hr/>
 
-                    <UserTable myData={this.state.myData} deleteUserData={this.deleteUserData}/>
+                    <UserTable userId={this.state.userId} myData={this.state.myData} deleteUserData={this.deleteUserData} getMyData={this.getMyData}/>
 
                 
             </div>

@@ -98,13 +98,11 @@ app.get('/', (req, res, next) => {
 
 // user endpoint
 app.get("/api/getUser", controller.getUser)
-
-
 app.get('/api/centers', controller.getAll)
 app.get('/api/userData/:id', controller.getMyData)
 app.post('/api/userData', controller.addCenter)
 app.delete('/api/userData/:id', controller.deleteUserData);
-
+app.put('/api/userData/:id', controller.updateUser);
 
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}`);

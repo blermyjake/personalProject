@@ -71,6 +71,11 @@ export default class UpdateUser extends Component {
         //   homeListings: res.data });
     }
 
+    handleEdit(){
+      
+    }
+
+
 
     handleClickNewData(){
     let {organization, services, website, hours, phone, maplink, userid} = this.state;
@@ -101,14 +106,15 @@ export default class UpdateUser extends Component {
             <div className='sub_box'>
             Add or Update Info
             <hr/>
-            <Link to='/user/'>
-            <button className="button" >Cancel</button>
-            </Link>
-
             <Link to={'/user'}>
-          <button className="button" onClick={this.handleClickNewData}>
+                 <button className="button" onClick={this.handleClickNewData}>
             Complete
           </button>
+
+            <Link to='/user/'>
+                 <button className="button" >Update</button>
+            </Link>
+
         </Link>
 
         
