@@ -103,12 +103,85 @@ export default class UserTable extends Component {
                        {e.services}
                 </td>
                 )}
+                
 
+                 {this.state[`${e.address}${e.id}`] ? (
+                  <input
+                    value={this.state.text || e.address}
+                    onBlur={event => this.handleEdit(event.target.name, e.id)}
+                    onChange={event =>
+                      this.setState({ text: event.target.value })
+                    }
+                    name="address"
+                  />
 
-                <td className="tdStyle3User">{e.address}</td>
-                <td className="tdStyle4User">{e.hours}</td>
-                <td className="tdStyle5User">{e.phone}</td>
-                <td className="tdStyle6User">{e.maplink}</td>
+                ) : (
+
+                <td className="tdStyle3User" onClick={ () => 
+                    this.setState({ [e.address + e.id]: true })
+                       }> 
+                       {e.address}
+                </td>
+                )}
+
+                {this.state[`${e.hours}${e.id}`] ? (
+                  <input
+                    value={this.state.text || e.hours}
+                    onBlur={event => this.handleEdit(event.target.name, e.id)}
+                    onChange={event =>
+                      this.setState({ text: event.target.value })
+                    }
+                    name="hours"
+                  />
+
+                ) : (
+
+                <td className="tdStyle4User" onClick={ () => 
+                    this.setState({ [e.hours + e.id]: true })
+                       }> 
+                       {e.hours}
+                </td>
+                )}
+
+                {this.state[`${e.phone}${e.id}`] ? (
+                  <input
+                    value={this.state.text || e.phone}
+                    onBlur={event => this.handleEdit(event.target.name, e.id)}
+                    onChange={event =>
+                      this.setState({ text: event.target.value })
+                    }
+                    name="phone"
+                  />
+
+                ) : (
+
+                <td className="tdStyle5User" onClick={ () => 
+                    this.setState({ [e.phone + e.id]: true })
+                       }> 
+                       {e.phone}
+                </td>
+                )}
+               
+               {this.state[`${e.maplink}${e.id}`] ? (
+                  <input
+                    value={this.state.text || e.maplink}
+                    onBlur={event => this.handleEdit(event.target.name, e.id)}
+                    onChange={event =>
+                      this.setState({ text: event.target.value })
+                    }
+                    name="maplink"
+                  />
+
+                ) : (
+
+                <td className="tdStyle6User" onClick={ () => 
+                    this.setState({ [e.maplink + e.id]: true })
+                       }> 
+                       {e.maplink}
+                </td>
+                )}
+                
+                
                 <td className="tdStyle7User">{e.userid}</td>
               </tr>
             </tbody>

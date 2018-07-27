@@ -60,7 +60,7 @@ class User extends Component {
                 </h2>
 
 
-                    <UpdateUser getMyData={this.getMyData} userId={this.state.userId}/>
+                    <UpdateUser userId={this.state.userId} getMyData={this.getMyData} />
                 <hr/>
 
                     <UserTable userId={this.state.userId} myData={this.state.myData} deleteUserData={this.deleteUserData} getMyData={this.getMyData}/>

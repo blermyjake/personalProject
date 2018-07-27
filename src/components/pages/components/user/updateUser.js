@@ -71,9 +71,7 @@ export default class UpdateUser extends Component {
         //   homeListings: res.data });
     }
 
-    // handleEdit(){
-
-    // }
+   
 
 
 
@@ -130,7 +128,7 @@ export default class UpdateUser extends Component {
 
             <hr/>
             <Link to={'/user'}>
-                <button className="button" onClick={this.handleClickNewData}>
+                <button className="button" onClick={this.handleClickNewData} >
                     Submit
                 </button>
             </Link>
