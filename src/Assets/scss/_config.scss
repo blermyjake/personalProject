@@ -2,265 +2,254 @@
 $black: #010000;
 $white: #ffffff;
 $lightGrey: #e6e6e6;
-$darkGrey: #333;
+$darkGrey: rgb(114, 109, 109);
 $yellow: rgb(216, 216, 4);
 
 @mixin translateY($e) {
-    -webkit-transform: translateY($e);
-    -moz-transform: translateY($e);
-    transform: translateY($e);
+  -webkit-transform: translateY($e);
+  -moz-transform: translateY($e);
+  transform: translateY($e);
 }
 
 @mixin transition($e) {
-    -webkit-transition:$e;
-    -moz-transition:$e;
-    transition:$e;
+  -webkit-transition: $e;
+  -moz-transition: $e;
+  transition: $e;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: $black;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: $black;
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
-    text-decoration: none;
-    @include transition(.4s ease-in-out);
-    cursor: pointer;
+  text-decoration: none;
+  @include transition(0.4s ease-in-out);
+  cursor: pointer;
 
-    &:hover {
-        color: $yellow;
-        @include transition(ease-in-out);
-    }
+  &:hover {
+    color: $yellow;
+    @include transition(ease-in-out);
+  }
 }
 
-
 .container-fluid {
-    line-height: 24px;
-    margin: 24px;
+  line-height: 24px;
+  margin: 24px;
 }
 
 .container-fluid2 {
-    margin: 35px;
+  margin: 35px;
 }
 
 .container-fluid3 {
-    margin: 35px;
+  margin: 35px;
 }
 
 .styleTable {
-    border: 1px solid black;
-    table-layout: fixed;
-    // width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // word-wrap: break-word;
+  border: 1px solid black;
+  table-layout: fixed;
+  // width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // word-wrap: break-word;
 }
 
 .tableDiv {
-    word-wrap: break-word;
-    font-size: 12px;
+  word-wrap: break-word;
+  font-size: 12px;
 }
 
 .table {
-    margin: 0px;
-    table-layout: fixed;
-    width: 100%;
-    // font-size: 1.3vw;
+  margin: 0px;
+  table-layout: fixed;
+  width: 100%;
+  // font-size: 1.3vw;
 }
 
-// .table 
+// .table
 
 .trMain {
-    width: 100%;
+  width: 100%;
 }
 
-.tableDiv:nth-child(even){
-    background-color: rgb(228, 227, 227);
+.tableDiv:nth-child(even) {
+  background-color: rgb(228, 227, 227);
 }
-
-
-
-
 
 .tdStyle1 {
-    border: 1px solid black;
-    width: 15%;
+  border: 1px solid black;
+  width: 15%;
 }
 
 .tdStyle2 {
-    border: 1px solid black;
-    width: 20%;
+  border: 1px solid black;
+  width: 20%;
 }
 
 .tdStyle3 {
-    border: 1px solid black;
-    width: 15%;  
+  border: 1px solid black;
+  width: 15%;
 }
 
 .tdStyle4 {
-    border: 1px solid black;
-    width: 10%;
+  border: 1px solid black;
+  width: 10%;
 }
 
 .tdStyle5 {
-    border: 1px solid black;
-    width: 10%;   
+  border: 1px solid black;
+  width: 10%;
 }
 
 .tdStyle6 {
-    border: 1px solid black;
-    width: 30%;    
+  border: 1px solid black;
+  width: 30%;
 }
 
 .tableHead {
-    width: 100%;
-    // border: 1px solid black;
-    // text-align: center;
-    word-wrap: break-word;
-    font-size: 1.4vw;
-    // justify-content: center;
-    // text-align: center;
+  width: 100%;
+  // border: 1px solid black;
+  // text-align: center;
+  word-wrap: break-word;
+  font-size: 1.4vw;
+  // justify-content: center;
+  // text-align: center;
 }
 
 th {
-    text-align: center;
+  text-align: center;
 }
 
 .tabHead1 {
-    border: 1.5px solid black;
-    width: 15%;
+  border: 1.5px solid black;
+  width: 15%;
 }
 .tabHead2 {
-    border: 1.5px solid black;
-    width: 20%;
+  border: 1.5px solid black;
+  width: 20%;
 }
 .tabHead3 {
-    border: 1.5px solid black;
-    width: 15%;
+  border: 1.5px solid black;
+  width: 15%;
 }
 .tabHead4 {
-    border: 1.5px solid black;
-    width: 10%;
+  border: 1.5px solid black;
+  width: 10%;
 }
 .tabHead5 {
-    border: 1.5px solid black;
-    width: 10%;
+  border: 1.5px solid black;
+  width: 10%;
 }
 .tabHead6 {
-    border: 1.5px solid black;
-    width: 30%;
+  border: 1.5px solid black;
+  width: 30%;
 }
 
 // user profile -------------------------------------
 
 .checkStyle {
-    background-position-x: -1%; 
+  background-position-x: -1%;
 }
 
 .tdStyleCheckBox {
-    border: 1 px solid black;
-    width: 2.5%;
+  border: 1 px solid black;
+  width: 2.5%;
 }
 
 .tdStyle1User {
-    border: 1px solid black;
-    width: 15%;
+  border: 1px solid black;
+  width: 15%;
 }
 
 .tdStyle2User {
-    border: 1px solid black;
-    width: 20%;
+  border: 1px solid black;
+  width: 20%;
 }
 
 .tdStyle3User {
-    border: 1px solid black;
-    width: 15%;  
+  border: 1px solid black;
+  width: 15%;
 }
 
 .tdStyle4User {
-    border: 1px solid black;
-    width: 10%;
+  border: 1px solid black;
+  width: 10%;
 }
 
 .tdStyle5User {
-    border: 1px solid black;
-    width: 10%;   
+  border: 1px solid black;
+  width: 10%;
 }
 
 .tdStyle6User {
-    border: 1px solid black;
-    width: 22.5%;    
+  border: 1px solid black;
+  width: 22.5%;
 }
 .tdStyle7User {
-    border: 1px solid black;
-    width: 5%;
+  border: 1px solid black;
+  width: 5%;
 }
 
 .tabHead0User {
-    border: 1.5px solid black;
-    width: 2.5%;
+  border: 1.5px solid black;
+  width: 2.5%;
 }
 
 .tabHead1User {
-    border: 1.5px solid black;
-    width: 15%;
+  border: 1.5px solid black;
+  width: 15%;
 }
 .tabHead2User {
-    border: 1.5px solid black;
-    width: 20%;
+  border: 1.5px solid black;
+  width: 20%;
 }
 .tabHead3User {
-    border: 1.5px solid black;
-    width: 15%;
+  border: 1.5px solid black;
+  width: 15%;
 }
 .tabHead4User {
-    border: 1.5px solid black;
-    width: 10%;
+  border: 1.5px solid black;
+  width: 10%;
 }
 .tabHead5User {
-    border: 1.5px solid black;
-    width: 10%;
+  border: 1.5px solid black;
+  width: 10%;
 }
 .tabHead6User {
-    border: 1.5px solid black;
-    width: 22.5%;
+  border: 1.5px solid black;
+  width: 22.5%;
 }
-.tabHead7User{
-    border: 1.5px solid black;
-    width: 5%;
+.tabHead7User {
+  border: 1.5px solid black;
+  width: 5%;
 }
-
-
-
 
 .inputFields {
-	display: inline-block;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	// justify-content: space-between;
-	// align-items: flex-start;
-	// align-content: stretch;
+  display: inline-block;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: flex-start;
+  // align-content: stretch;
 }
 
-
-
 .button {
-    // display: flex;
-	// flex-direction: column;
-	// flex-wrap: wrap;
-	// justify-content: space-between;
-	// align-items: center;
-	// align-content: stretch;
-    border-radius: 8px;
-    transition-duration: 0.4s;
-
+  // display: flex;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // align-items: center;
+  // align-content: stretch;
+  border-radius: 8px;
+  transition-duration: 0.4s;
 }
 
 // .button:hover {
 
-//     background-color: #e7e7e7; 
+//     background-color: #e7e7e7;
 //     color: rgb(230, 0, 0);
 // }
