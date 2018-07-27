@@ -24,8 +24,6 @@ export default class UserTable extends Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  
-
   //   leave this method here
   handleInput(val) {
     this.setState({
@@ -45,8 +43,7 @@ export default class UserTable extends Component {
 
   render() {
     const { input } = this.state;
-    console.log('CHILD STATE: ', this.state);
-   
+    console.log("CHILD STATE: ", this.state);
 
     //   console.log(allCenters);
     // console.log(allData);
@@ -64,7 +61,6 @@ export default class UserTable extends Component {
                   />
                 </td>
 
-                
                 {this.state[`${e.organization}${e.id}`] ? (
                   <input
                     value={this.state.text || e.organization}
@@ -74,18 +70,18 @@ export default class UserTable extends Component {
                     }
                     name="organization"
                   />
-
                 ) : (
-
-                <td className="tdStyle1User" onClick={() =>
+                  <td
+                    className="tdStyle1User"
+                    onClick={() =>
                       this.setState({ [e.organization + e.id]: true })
-                    }>
+                    }
+                  >
                     {e.organization}
-                </td>
+                  </td>
                 )}
 
-
-                 {this.state[`${e.services}${e.id}`] ? (
+                {this.state[`${e.services}${e.id}`] ? (
                   <input
                     value={this.state.text || e.services}
                     onBlur={event => this.handleEdit(event.target.name, e.id)}
@@ -94,18 +90,16 @@ export default class UserTable extends Component {
                     }
                     name="services"
                   />
-
                 ) : (
-
-                <td className="tdStyle2User" onClick={ () => 
-                    this.setState({ [e.services + e.id]: true })
-                       }> 
-                       {e.services}
-                </td>
+                  <td
+                    className="tdStyle2User"
+                    onClick={() => this.setState({ [e.services + e.id]: true })}
+                  >
+                    {e.services}
+                  </td>
                 )}
-                
 
-                 {this.state[`${e.address}${e.id}`] ? (
+                {this.state[`${e.address}${e.id}`] ? (
                   <input
                     value={this.state.text || e.address}
                     onBlur={event => this.handleEdit(event.target.name, e.id)}
@@ -114,14 +108,13 @@ export default class UserTable extends Component {
                     }
                     name="address"
                   />
-
                 ) : (
-
-                <td className="tdStyle3User" onClick={ () => 
-                    this.setState({ [e.address + e.id]: true })
-                       }> 
-                       {e.address}
-                </td>
+                  <td
+                    className="tdStyle3User"
+                    onClick={() => this.setState({ [e.address + e.id]: true })}
+                  >
+                    {e.address}
+                  </td>
                 )}
 
                 {this.state[`${e.hours}${e.id}`] ? (
@@ -133,14 +126,13 @@ export default class UserTable extends Component {
                     }
                     name="hours"
                   />
-
                 ) : (
-
-                <td className="tdStyle4User" onClick={ () => 
-                    this.setState({ [e.hours + e.id]: true })
-                       }> 
-                       {e.hours}
-                </td>
+                  <td
+                    className="tdStyle4User"
+                    onClick={() => this.setState({ [e.hours + e.id]: true })}
+                  >
+                    {e.hours}
+                  </td>
                 )}
 
                 {this.state[`${e.phone}${e.id}`] ? (
@@ -152,17 +144,16 @@ export default class UserTable extends Component {
                     }
                     name="phone"
                   />
-
                 ) : (
-
-                <td className="tdStyle5User" onClick={ () => 
-                    this.setState({ [e.phone + e.id]: true })
-                       }> 
-                       {e.phone}
-                </td>
+                  <td
+                    className="tdStyle5User"
+                    onClick={() => this.setState({ [e.phone + e.id]: true })}
+                  >
+                    {e.phone}
+                  </td>
                 )}
-               
-               {this.state[`${e.maplink}${e.id}`] ? (
+
+                {this.state[`${e.maplink}${e.id}`] ? (
                   <input
                     value={this.state.text || e.maplink}
                     onBlur={event => this.handleEdit(event.target.name, e.id)}
@@ -171,17 +162,15 @@ export default class UserTable extends Component {
                     }
                     name="maplink"
                   />
-
                 ) : (
-
-                <td className="tdStyle6User" onClick={ () => 
-                    this.setState({ [e.maplink + e.id]: true })
-                       }> 
-                       {e.maplink}
-                </td>
+                  <td
+                    className="tdStyle6User"
+                    onClick={() => this.setState({ [e.maplink + e.id]: true })}
+                  >
+                    {e.maplink}
+                  </td>
                 )}
-                
-                
+
                 <td className="tdStyle7User">{e.userid}</td>
               </tr>
             </tbody>
@@ -210,7 +199,7 @@ export default class UserTable extends Component {
                 <th className="tabHead4User">Hours</th>
                 <th className="tabHead5User">Phone Number</th>
                 <th className="tabHead6User">Maplink</th>
-                <th className="tabHead7User">User Id</th>
+                <th className="tabHead7User">Join Data</th>
               </tr>
             </thead>
           </table>

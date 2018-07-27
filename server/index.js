@@ -27,7 +27,10 @@ app.set('db', db);
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false, 
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60//1 hour
+    }
 }));
 app.use( passport.initialize() );
 app.use( passport.session() );
@@ -80,29 +83,24 @@ passport.authenticate('auth0',
     )
 );
 
-
-app.get('/', (req, res, next) => {
+app.get('/user', (req, res, next) => {
     console.log("hit")
     if( !req.user ) {
       res.redirect('/login')
+      // res.status(401).send({message: "OH NO!! please login!!1"})
     } else {
         res.status(200).send(req.user);
     }
   });
 
-
-
-// app.get('/api/test', (req, res, next) => {
-//     res.status(200).send("It's Working!")
-// });
-
 // user endpoint
-app.get("/api/getUser", controller.getUser)
+app.get('/api/getUser', controller.getUser)
 app.get('/api/centers', controller.getAll)
 app.get('/api/userData/:id', controller.getMyData)
 app.post('/api/userData', controller.addCenter)
 app.delete('/api/userData/:id', controller.deleteUserData);
 app.put('/api/userData/:id', controller.updateUser);
+app.get('/api/user/logout', controller.logout)
 
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}`);
