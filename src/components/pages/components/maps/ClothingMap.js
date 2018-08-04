@@ -9,7 +9,7 @@ class ClothingMap extends Component {
 
     return (
       <div className="mapMainDiv">
-        <div className="map2ndDiv">
+        <div className="map-responsive">
           {/* <iframe className="shelterMap embed-responsive-item" src={url}></iframe> */}
           <iframe
             width="750"

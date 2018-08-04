@@ -179,6 +179,20 @@ th {
 //   background-position-x: 3%;
 // }
 
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 .fa {
   margin: auto;
 }
@@ -274,29 +288,29 @@ th {
 
 // media queries
 @media (max-width: 800px) {
-  iframe {
-    width: 550px;
-    height: 350px;
-  }
+  // iframe {
+  //   width: 550px;
+  //   height: 350px;
+  // }
   // mulitple 800px can go here
 }
 
 @media (max-width: 607px) {
-  iframe {
-    width: 350px;
-    height: 350px;
-  }
+  // iframe {
+  //   width: 400px;
+  //   height: 350px;
+  // }
   .tableHead {
     font-size: 2vw;
     height: 10px;
   }
 }
 
-@media (max-width: 400px) {
-  iframe {
-    width: 300px;
-    height: 350px;
-  }
+@media (max-width: 500px) {
+  // iframe {
+  //   width: 350px;
+  //   height: 350px;
+  // }
 
   table {
     border: 0;
