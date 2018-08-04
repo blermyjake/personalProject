@@ -10,7 +10,8 @@ class User extends Component {
 
     this.state = {
       myData: [],
-      userId: 0
+      userId: 0,
+      name: ""
     };
     this.getUser = this.getUser.bind(this);
     this.getMyData = this.getMyData.bind(this);
@@ -24,12 +25,13 @@ class User extends Component {
     axios
       .get("/api/getUser")
       .then(res => {
-        console.log("USER-INFO HERE=>>>", res.data);
+        // console.log("USER-INFO HERE=>>>", res.data);
         this.setState({
           userId: res.data.userid
         });
         this.getMyData(this.state.userId);
       })
+      .then(() => this.getUniqueData(this.state.userId))
       .catch(err => console.log(err));
   }
 
@@ -38,6 +40,16 @@ class User extends Component {
       .get(`/api/userData/${id}`)
       .then(res => {
         this.setState({ myData: res.data });
+      })
+      .catch(err => console.log(err));
+  };
+
+  getUniqueData = id => {
+    axios
+      .get(`/api/userData/hello/${id}`)
+      .then(res => {
+        // console.log(res);
+        this.setState({ name: res.data[0].name });
       })
       .catch(err => console.log(err));
   };
@@ -57,11 +69,11 @@ class User extends Component {
 
   render() {
     const { input } = this.state;
-    console.log("PARENT STATE: ", this.state);
-    console.log(process.env);
+    // console.log("PARENT STATE: ", this.state);
+    // console.log(process.env);
     return (
       <div className="container-fluid">
-        <h1>My Profile</h1>
+        <h1 className="userWelcome">Welcome {this.state.name}</h1>
         <a href={process.env.REACT_APP_LOGOUT}>Logout</a>
         <hr />
 

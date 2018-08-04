@@ -43,7 +43,7 @@ export default class UserTable extends Component {
 
   render() {
     const { input } = this.state;
-    console.log("CHILD STATE: ", this.state);
+    // console.log("CHILD STATE: ", this.state);
 
     //   console.log(allCenters);
     // console.log(allData);
@@ -72,6 +72,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Organization"
                     className="tdStyle1User"
                     onClick={() =>
                       this.setState({ [e.organization + e.id]: true })
@@ -92,6 +93,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Services"
                     className="tdStyle2User"
                     onClick={() => this.setState({ [e.services + e.id]: true })}
                   >
@@ -110,6 +112,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Website"
                     className="tdStyle3User"
                     onClick={() => this.setState({ [e.address + e.id]: true })}
                   >
@@ -128,6 +131,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Hours"
                     className="tdStyle4User"
                     onClick={() => this.setState({ [e.hours + e.id]: true })}
                   >
@@ -146,6 +150,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Phone"
                     className="tdStyle5User"
                     onClick={() => this.setState({ [e.phone + e.id]: true })}
                   >
@@ -164,6 +169,7 @@ export default class UserTable extends Component {
                   />
                 ) : (
                   <td
+                    data-label="Maplink"
                     className="tdStyle6User"
                     onClick={() => this.setState({ [e.maplink + e.id]: true })}
                   >
@@ -171,7 +177,7 @@ export default class UserTable extends Component {
                   </td>
                 )}
 
-                <td className="tdStyle7User">{e.userid}</td>
+                {/* <td className="tdStyle7User">{e.userid}</td> */}
               </tr>
             </tbody>
           </table>
@@ -193,13 +199,25 @@ export default class UserTable extends Component {
               {/* table headers */}
               <tr>
                 <th className="tabHead0User" />
-                <th className="tabHead1User">Organization</th>
-                <th className="tabHead2User">Services Offered</th>
-                <th className="tabHead3User">Website</th>
-                <th className="tabHead4User">Hours</th>
-                <th className="tabHead5User">Phone Number</th>
-                <th className="tabHead6User">Maplink</th>
-                <th className="tabHead7User">Join Data</th>
+                <th data-label="Organization" className="tabHead1User">
+                  Organization
+                </th>
+                <th data-label="Services" className="tabHead2User">
+                  Services
+                </th>
+                <th data-label="Website" className="tabHead3User">
+                  Website
+                </th>
+                <th data-label="Hours" className="tabHead4User">
+                  Hours
+                </th>
+                <th data-label="Phone" className="tabHead5User">
+                  Phone Number
+                </th>
+                <th data-label="Maplink" className="tabHead6User">
+                  Maplink
+                </th>
+                {/* <th className="tabHead7User">User Id</th> */}
               </tr>
             </thead>
           </table>
