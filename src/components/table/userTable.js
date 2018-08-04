@@ -212,7 +212,7 @@ export default class UserTable extends Component {
                   Hours
                 </th>
                 <th data-label="Phone" className="tabHead5User">
-                  Phone Number
+                  Phone
                 </th>
                 <th data-label="Maplink" className="tabHead6User">
                   Maplink

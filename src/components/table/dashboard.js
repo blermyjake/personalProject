@@ -103,7 +103,7 @@ export default class Dashboard extends Component {
                   Hours
                 </th>
                 <th data-label="Phone Number" className="tabHead5">
-                  Phone Number
+                  Phone
                 </th>
                 <th data-label="Maplink" className="tabHead6">
                   Maplink

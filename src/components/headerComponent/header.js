@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import hands from "../headerComponent/hands.png";
 
 class Header extends Component {
   render() {
     // console.log(process.env.REACT_APP_LOGIN)
     return (
       <header>
-        <div className="logo">HELPING HANDS</div>
-
+        {/* <div className="logo">HELPING HANDS</div> */}
+        <img src={hands} className="logo" />
         <nav>
           <label for="toggle">&#9776;</label>
           <input type="checkbox" id="toggle" />

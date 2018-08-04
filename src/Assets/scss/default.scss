@@ -11,8 +11,9 @@ header {
   .logo {
     position: absolute;
     top: 50%;
-    left: 15px;
+    left: 33px;
     @include translateY(-50%);
+    height: 100px;
   }
   // ------
 
