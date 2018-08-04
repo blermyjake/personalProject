@@ -9,7 +9,9 @@ class Header extends Component {
         <div className="logo">HELPING HANDS</div>
 
         <nav>
-          <ul>
+          <label for="toggle">&#9776;</label>
+          <input type="checkbox" id="toggle" />
+          <ul className="ulStyle">
             <li className="Home">
               <Link to="/">Home</Link>
               {/* <a href="#">Home</a> */}
@@ -27,9 +29,9 @@ class Header extends Component {
               {/* <a href="#">Contact</a> */}
             </li>
 
-            {/* <li className='User'>
-                        <Link to="/user">Profile</Link>
-                    </li> */}
+            <li className="User">
+              <Link to="/user">Profile</Link>
+            </li>
             <li className="Login">
               <a href={process.env.REACT_APP_LOGIN}>Login</a>
               {/* <a href="#">Contact</a> */}

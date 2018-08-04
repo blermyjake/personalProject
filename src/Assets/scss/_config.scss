@@ -17,12 +17,25 @@ $yellow: rgb(216, 216, 4);
   transition: $e;
 }
 
+label {
+  font-size: 36px;
+  margin: 0 36px 0 0;
+  display: none;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(1.5);
+}
+
+#toggle {
+  display: none;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: $black;
   font-weight: 400;
   font-style: normal;
+  // min-width: 320px;
 }
 
 a {
@@ -372,12 +385,5 @@ th {
 
   table td:last-child {
     border-bottom: 0;
-  }
-}
-
-@media (max-width: 325px) {
-  iframe {
-    width: 250px;
-    height: 250px;
   }
 }

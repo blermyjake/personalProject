@@ -6,7 +6,7 @@ header {
   width: 100%;
   background: $darkGrey;
   color: $white;
-  height: 90px;
+  height: 20vh;
 
   .logo {
     position: absolute;
@@ -21,6 +21,7 @@ header {
   nav ul li {
     margin: 0;
     padding: 0;
+    text-align: right;
   }
   // ------
   nav {
@@ -46,3 +47,58 @@ header {
     }
   }
 }
+
+@media (max-width: 675px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  #toggle:checked + ul,
+  li {
+    margin-right: 0;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    // border: 0.5px solid;
+  }
+  header {
+    height: 27vh;
+  }
+}
+
+@media (max-width: 540px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  #toggle:checked + ul,
+  li {
+    margin-right: 0;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    // border: 0.5px solid;
+  }
+  header {
+    height: 27vh;
+  }
+}
+
+@media (max-width: 325px) {
+  iframe {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+// @media (max-width: );
