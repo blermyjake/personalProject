@@ -19,7 +19,10 @@ $yellow: rgb(216, 216, 4);
 
 label {
   font-size: 36px;
-  margin: 0 36px 0 0;
+  // margin: 0 36px 0 0;
+  position: absolute;
+  right: 80px;
+  top: -26px;
   display: none;
   -webkit-transform: scaleX(0.5);
   transform: scaleX(1.5);
@@ -76,20 +79,27 @@ a {
 .haveTop {
   // background: rgba(0, 0, 0, 0.5);
   width: 55%;
-  position: relative;
+  // position: relative;
   left: -15px;
 }
 .hHave {
-  position: relative;
+  // position: relative;
   left: 15px;
-  text-shadow: 2px 2px #000;
+
+  // text-shadow: 2px 2px #000;
+  background-color: #060505;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  // color: transparent;
+  text-shadow: rgb(1, 1, 1) 0px 2px 2px;
 }
 
 .needP {
   text-align: center;
   color: black;
   width: 65%;
-  position: relative;
+  margin: auto;
   left: 18%;
 }
 
@@ -100,13 +110,13 @@ a {
 .haveP {
   text-align: center;
   // text-indent: 50px;
-  margin: 1px 0 0 -15px;
+  margin: auto;
   // padding: 0 0 12px 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  position: absolute;
+  // position: absolute;
   width: 85%;
-  position: relative;
+  // position: relative;
   left: 8%;
 }
 
