@@ -118,8 +118,9 @@ export default class UpdateUser extends Component {
       <div>
         {/* <h2 className='title'>Update it</h2> */}
         <div className="sub_box">
-          Add or Update Info
-          <hr />
+          <h2>My Center Information</h2>
+          <h4>Add or Update Info</h4>
+          {/* <hr /> */}
           <div className="inputFields">
             <input
               className="inputName"
@@ -159,9 +160,9 @@ export default class UpdateUser extends Component {
 
             {/* <input className='inputId' placeholder="User Id" onChange={(event) => this.handleId(event.target.value)}/> */}
           </div>
-          <hr />
+          {/* <hr /> */}
           <Link to={"/user"}>
-            <button className="button" onClick={this.handleClickNewData}>
+            <button className="buttonSubmit" onClick={this.handleClickNewData}>
               Submit
             </button>
           </Link>

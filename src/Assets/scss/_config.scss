@@ -88,17 +88,26 @@ a {
 .needP {
   text-align: center;
   color: black;
+  width: 65%;
+  position: relative;
+  left: 18%;
+}
+
+.needTop {
+  text-align: center;
 }
 
 .haveP {
   text-align: center;
-  text-indent: 50px;
-  margin: 15px 0 0 -15px;
-  padding: 0 0 12px 0;
+  // text-indent: 50px;
+  margin: 1px 0 0 -15px;
+  // padding: 0 0 12px 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   position: absolute;
-  width: 100%;
+  width: 85%;
+  position: relative;
+  left: 8%;
 }
 
 .haveN {
@@ -114,9 +123,16 @@ a {
 .container-fluid3 {
   margin: 5px;
 }
+.container-fluid4 {
+  margin: 15px;
+}
 
-.inputFields {
-  justify-content: center;
+.userH2 {
+  text-align: center;
+}
+
+.userTable {
+  margin: 0 -8px 0 -15px;
 }
 
 .needDiv {
@@ -345,12 +361,25 @@ a {
 
 .inputFields {
   display: inline-block;
+  justify-content: center;
+  margin: 15px 0 0 10%;
 }
 
 .button {
   border-radius: 8px;
   transition-duration: 0.4s;
   margin: 5px;
+}
+
+.sub_box {
+  display: inline-block;
+  margin: 1px 1px 1px 1px;
+}
+
+.buttonSubmit {
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  margin: 40px 0px 0px -1px;
 }
 
 // .button:hover {

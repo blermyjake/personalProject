@@ -18,7 +18,7 @@ class Need extends Component {
       // component={Clothing}
       // component={Help}
       <div className="container-fluidNeed">
-        <h1>I Need</h1>
+        <h1 className="needTop">I Need</h1>
 
         <div className="needDiv">
           <button className="button">
@@ -39,10 +39,9 @@ class Need extends Component {
         </div>
         <hr />
         <p className="needP">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
-          totam consequatur ipsa accusantium praesentium error consequuntur,
-          modi ipsam atque asperiores nesciunt deleniti eligendi? Nam culpa ab
-          ipsum omnis temporibus dicta.
+          There are many places to get help in the Dallas area. Whatever your
+          needs are, there's a place ready to help. Click through to find the
+          right place for you.
         </p>
       </div>
     );

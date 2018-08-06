@@ -27,7 +27,7 @@ header {
   // ------
   nav {
     position: absolute;
-    top: 50%;
+    top: 47%;
     right: 15px;
     @include translateY(-50%);
 
@@ -72,6 +72,21 @@ header {
   }
 }
 
+@media (max-width: 528px) {
+  .haveP {
+    text-align: center;
+    // text-indent: 50px;
+    margin: 1px 0 0 -15px;
+    // padding: 0 0 12px 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    width: 100%;
+    position: relative;
+    left: 3%;
+  }
+}
+
 @media (max-width: 540px) {
   label {
     display: block;
@@ -92,6 +107,12 @@ header {
   }
   header {
     height: 30vh;
+  }
+}
+
+@media (max-width: 446px) {
+  .haveP {
+    font-size: 4vw;
   }
 }
 

@@ -34,12 +34,13 @@ class Have extends Component {
           </button>
           {/* </div> */}
         </div>
-
-        <p className="haveP">
-          “If you want happiness for a day, go fishing. If you want happiness
-          for a year, travle the world. If you want happiness for a lifetime,
-          help somebody.”
-        </p>
+        <div className="testDiv">
+          <p className="haveP">
+            “If you want happiness for a day, go fishing. If you want happiness
+            for a year, travel the world. If you want happiness for a lifetime,
+            help somebody.”
+          </p>
+        </div>
       </div>
     );
   }

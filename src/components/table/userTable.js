@@ -187,7 +187,7 @@ export default class UserTable extends Component {
 
     return (
       <div>
-        <h2>Help Center Information</h2>
+        <h2 className="userH2"> Centers</h2>
         <hr />
         {/* <input className='inputSearch' placeholder="Search"
             onChange={(event) => this.handleInput(event.target.value)}/>

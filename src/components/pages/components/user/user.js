@@ -77,17 +77,16 @@ class User extends Component {
         <a href={process.env.REACT_APP_LOGOUT}>Logout</a>
         <hr />
 
-        <h2>My Center Information</h2>
-
         <UpdateUser userId={this.state.userId} getMyData={this.getMyData} />
         <hr />
-
-        <UserTable
-          userId={this.state.userId}
-          myData={this.state.myData}
-          deleteUserData={this.deleteUserData}
-          getMyData={this.getMyData}
-        />
+        <div className="userTable">
+          <UserTable
+            userId={this.state.userId}
+            myData={this.state.myData}
+            deleteUserData={this.deleteUserData}
+            getMyData={this.getMyData}
+          />
+        </div>
       </div>
     );
   }
