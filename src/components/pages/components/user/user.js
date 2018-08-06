@@ -72,7 +72,7 @@ class User extends Component {
     // console.log("PARENT STATE: ", this.state);
     // console.log(process.env);
     return (
-      <div className="container-fluid">
+      <div className="container-fluid4">
         <h1 className="userWelcome">Welcome {this.state.name}</h1>
         <a href={process.env.REACT_APP_LOGOUT}>Logout</a>
         <hr />

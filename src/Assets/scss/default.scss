@@ -68,7 +68,7 @@ header {
     // border: 0.5px solid;
   }
   header {
-    height: 27vh;
+    height: 30vh;
   }
 }
 
@@ -91,7 +91,13 @@ header {
     // border: 0.5px solid;
   }
   header {
-    height: 27vh;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 434px) {
+  .haveP {
+    display: none;
   }
 }
 

@@ -50,17 +50,73 @@ a {
 }
 
 .container-fluid {
-  // max-width: 819px;
+  height: 50vh;
   line-height: 24px;
-  margin: 24px;
+  margin: 0;
+  color: white;
+  // justify-content: center;
+}
+
+.haveText {
+  position: fixed;
+  bottom: 335px;
+  right: 0;
+}
+
+#imgHave {
+  background-image: url("http://www.borgenmagazine.com/wp-content/uploads/2014/01/homeless.jpg");
+  background-size: cover;
+  width: 100%;
+  // height: auto;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  // background-size: auto 143%;
+}
+
+.haveTop {
+  // background: rgba(0, 0, 0, 0.5);
+  width: 55%;
+  position: relative;
+  left: -15px;
+}
+.hHave {
+  position: relative;
+  left: 15px;
+  text-shadow: 2px 2px #000;
+}
+
+.needP {
+  text-align: center;
+  color: black;
+}
+
+.haveP {
+  text-align: center;
+  text-indent: 50px;
+  margin: 15px 0 0 -15px;
+  padding: 0 0 12px 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+.haveN {
+  text-align: center;
+  margin: 15px;
 }
 
 .container-fluid2 {
-  margin: 35px;
+  text-align: center;
+  margin: 5px;
 }
 
 .container-fluid3 {
-  margin: 35px;
+  margin: 5px;
+}
+
+.inputFields {
+  justify-content: center;
 }
 
 .needDiv {
@@ -72,7 +128,7 @@ a {
 .haveDiv {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 125px 0 0 0;
   padding: auto;
 }
 
