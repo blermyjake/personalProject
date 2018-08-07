@@ -5,13 +5,11 @@ class HomePage extends Component {
     return (
       <div className="container-fluid4">
         <div className="homeTop">
-          <h1>Home Page Content</h1>
+          <h1>Helping Hands</h1>
 
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consequuntur, in suscipit eos dolor expedita assumenda dignissimos
-            vero quo possimus cupiditate enim atque id sed ab minus nobis
-            repellendus voluptas. Fugit!
+            This is the place to find out where to get help. Or find out how to
+            help.
           </p>
         </div>
       </div>

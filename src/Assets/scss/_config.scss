@@ -76,6 +76,15 @@ a {
   // background-size: auto 143%;
 }
 
+#imgAbout {
+  background-image: url("http://gypsetmagazine.com/wp-content/uploads/2016/06/homeless.jpg");
+  background-size: cover;
+  width: 100%;
+  // height: auto;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
 .haveTop {
   // background: rgba(0, 0, 0, 0.5);
   width: 55%;
@@ -136,6 +145,40 @@ a {
 .container-fluid4 {
   margin: 15px;
 }
+.container-fluid5 {
+  margin: 15px;
+  height: 50vh;
+  width: 100%;
+  color: black;
+  text-shadow: rgb(1, 1, 1) 1px 1px 2px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+
+  // display: block;
+}
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+.pAboutDiv {
+  // display: block;
+}
+.pAbout {
+  // display: block;
+  // margin: 250px 0 0 50px;
+  width: 80vw;
+  color: black;
+  text-align: center;
+}
 
 .userH2 {
   text-align: center;
@@ -154,7 +197,7 @@ a {
 .haveDiv {
   display: flex;
   justify-content: center;
-  margin: 125px 0 0 0;
+  margin: 240px 0 0 0;
   padding: auto;
 }
 

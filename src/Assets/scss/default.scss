@@ -78,7 +78,7 @@ header {
     opacity: 0.95;
     position: absolute;
     left: -675px;
-    z-index: 100;
+    // z-index: 100;
 
     display: flex;
     flex-direction: column;
@@ -88,31 +88,12 @@ header {
 
     &.opened {
       top: 53px;
-      animation: handleOpen 0.2s;
+      animation: handleOpen 0.15ss;
     }
     &.closed {
       top: 53px;
-      left: -1450px;
-      animation: handleClose 2s;
-    }
-  }
-
-  @keyframes handleOpen {
-    from {
-      left: -1000px;
-    }
-    to {
-      left: -675px;
-    }
-  }
-  @keyframes handleClose {
-    from {
-      visibility: visible;
-      left: -675px;
-    }
-    to {
-      left: -10000px;
-      display: none;
+      left: -1650px;
+      animation: handleClose 1s;
     }
   }
 
@@ -120,7 +101,7 @@ header {
     height: 300px;
     width: 23%;
     position: absolute;
-    right: 49vw;
+    right: 75vw;
     top: 4vh;
     // margin: 30px 0 0 0;
     // display: flex;
@@ -160,7 +141,7 @@ header {
     height: 300px;
     width: 23%;
     position: absolute;
-    right: 49vw;
+    right: 75vw;
     top: 4vh;
     // display: flex;
     // flex-direction: column;
@@ -187,7 +168,7 @@ header {
   }
 }
 
-@media (max-width: 434px) {
+@media (max-width: 426px) {
   .haveP {
     display: none;
   }
@@ -201,3 +182,22 @@ header {
 }
 
 // @media (max-width: );
+
+@keyframes handleOpen {
+  from {
+    left: -1450px;
+  }
+  to {
+    left: -675px;
+  }
+}
+@keyframes handleClose {
+  from {
+    visibility: visible;
+    left: -675px;
+  }
+  to {
+    left: -10000px;
+    display: none;
+  }
+}

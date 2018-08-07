@@ -41,7 +41,7 @@ export default class Dashboard extends Component {
     // console.log(allData);
 
     let allData = this.state.allCenters
-      .filter(e => e.services.includes(input))
+      .filter(e => e.services.toLowerCase().includes(input.toLowerCase()))
       .map((e, i) => (
         // BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3"
         <div className="tableDiv" key={i}>
