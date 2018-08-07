@@ -88,7 +88,7 @@ header {
 
     &.opened {
       top: 53px;
-      animation: handleOpen 0.15ss;
+      animation: handleOpen 0.2s;
     }
     &.closed {
       top: 53px;
@@ -181,8 +181,6 @@ header {
   }
 }
 
-// @media (max-width: );
-
 @keyframes handleOpen {
   from {
     left: -1450px;
@@ -193,7 +191,7 @@ header {
 }
 @keyframes handleClose {
   from {
-    visibility: visible;
+    // visibility: visible;
     left: -675px;
   }
   to {

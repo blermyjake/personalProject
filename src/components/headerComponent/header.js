@@ -32,36 +32,65 @@ class Header extends Component {
               }
             >
               <ul className="ulStyle">
-                <li className="Home">
+                <li
+                  className="Home"
+                  onClick={() =>
+                    this.setState({ isOpened: !this.state.isOpened })
+                  }
+                >
                   <Link to="/" className="header-links">
                     Home
                   </Link>
                   {/* <a href="#">Home</a> */}
                 </li>
-                <li className="Need">
+
+                <li
+                  className="Need"
+                  onClick={() =>
+                    this.setState({ isOpened: !this.state.isOpened })
+                  }
+                >
                   <Link to="/need" className="header-links">
                     Get Help
                   </Link>
                   {/* <a href="#">Products</a> */}
                 </li>
-                <li className="Have">
+
+                <li
+                  className="Have"
+                  onClick={() =>
+                    this.setState({ isOpened: !this.state.isOpened })
+                  }
+                >
                   <Link to="/have" className="header-links">
                     Give Help
                   </Link>
                   {/* <a href="#">Contact</a> */}
                 </li>
-                <li className="About">
+
+                <li
+                  className="About"
+                  onClick={() =>
+                    this.setState({ isOpened: !this.state.isOpened })
+                  }
+                >
                   <Link to="/about" className="header-links">
                     About
                   </Link>
                   {/* <a href="#">Contact</a> */}
                 </li>
 
-                <li className="User">
+                <li
+                  className="User"
+                  onClick={() =>
+                    this.setState({ isOpened: !this.state.isOpened })
+                  }
+                >
                   <Link to="/user" className="header-links">
                     Profile
                   </Link>
                 </li>
+
                 <li className="Login">
                   <a
                     className="header-links"
