@@ -17,10 +17,11 @@ class Need extends Component {
       // component={Food}
       // component={Clothing}
       // component={Help}
-      <div className="container-fluidNeed">
-        <h1 className="needTop">I Need</h1>
-
-        <div className="needDiv">
+      <div id="imgNeedTop" className="container-fluid">
+        <div className="haveTop">
+          <h1 className="hHave">I Need</h1>
+        </div>
+        <div className="haveDiv">
           <button className="button">
             <Link to="/need/shelter">Shelter</Link>
           </button>
@@ -37,12 +38,13 @@ class Need extends Component {
             <Link to="/need/help">Help</Link>
           </button>
         </div>
-        <hr />
-        <p className="needP">
-          There are many places to get help in the Dallas area. Whatever your
-          needs are, there's a place ready to help. Click through to find the
-          right place for you.
-        </p>
+        <div className="testDiv">
+          <p className="haveP">
+            There are many places to get help in the Dallas area. Whatever your
+            needs are, there's a place ready to help. Click through to find the
+            right place for you.
+          </p>
+        </div>
       </div>
     );
   }

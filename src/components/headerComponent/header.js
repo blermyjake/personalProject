@@ -18,7 +18,7 @@ class Header extends Component {
           <img src={hands} className="logo" />
           <nav>
             <label
-              for="toggle"
+              // for="toggle"
               onClick={() => this.setState({ isOpened: !this.state.isOpened })}
             >
               &#9776;

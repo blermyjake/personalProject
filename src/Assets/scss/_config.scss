@@ -66,6 +66,14 @@ a {
   right: 0;
 }
 
+#imgNeedTop {
+  background-image: url("https://cdn-images-1.medium.com/max/1600/1*9tepH8WHB_M-mAbhU2xB8A.jpeg");
+  background-size: cover;
+  width: 100%;
+  background-repeat: no;
+  background-position: center 0;
+}
+
 #imgHave {
   background-image: url("http://www.borgenmagazine.com/wp-content/uploads/2014/01/homeless.jpg");
   background-size: cover;
@@ -161,6 +169,16 @@ a {
 
   // display: block;
 }
+
+.homePDiv {
+  // margin: 10px 10px 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  justify-content: center;
+  width: 75%;
+}
+
 .aboutContainer {
   display: flex;
   flex-direction: row;
@@ -411,6 +429,9 @@ a {
 //   border: 1.5px solid black;
 //   width: 5%;
 // }
+.inputFields input {
+  border: 1px solid black;
+}
 
 .inputFields {
   display: inline-block;

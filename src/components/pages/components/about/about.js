@@ -6,8 +6,8 @@ class About extends Component {
     return (
       <div>
         <div id="imgAbout" className="container-fluid5">
-          <h1>About us</h1>
-          <h2>Vision</h2>
+          {/* <h1>About us</h1> */}
+          <h1>Purpose</h1>
         </div>
 
         <div className="aboutContainer">

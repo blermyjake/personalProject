@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 module.exports = {
   getAll: (req, res, next) => {
     const db = req.app.get("db");
@@ -105,4 +107,16 @@ module.exports = {
         console.log(err);
       });
   }
+
+  // getMeWeather: (req, res, next) => {
+  //   console.log("weather endpoint hit", axios);
+
+  //   axios
+  //     .get(
+  //       "api.openweathermap.org/data/2.5/weather?q=Dallas&APPID=163d7c96a9b9d8bc5f19e6a7d39a8dd0"
+  //     )
+  //     .then(results => console.log(results))
+  //     .catch(err => console.log(err));
+  //   // res.status(200).send(weather);
+  // }
 };

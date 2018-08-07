@@ -112,6 +112,7 @@ app.delete("/api/userData/:id", controller.deleteUserData);
 app.get("/api/userData/:id", controller.getMyData);
 
 app.get("/api/userData/hello/:id", controller.getUniqueData);
+// app.get("/api/weather/", controller.getMeWeather);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
