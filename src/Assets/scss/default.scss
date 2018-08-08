@@ -77,14 +77,15 @@ header {
     background: #93bcc1;
     opacity: 0.95;
     position: absolute;
-    left: -675px;
+    // left: -675px;
+    left: -926px;
     // z-index: 100;
 
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: center;
+    // align-items: center;
 
     &.opened {
       top: 53px;
@@ -101,13 +102,15 @@ header {
     height: 300px;
     width: 23%;
     position: absolute;
-    right: 75vw;
-    top: 4vh;
-    // margin: 30px 0 0 0;
+    // right: 75vw;
+    right: 33vw;
+    // top: 4vh;
     // display: flex;
     // flex-direction: column;
-    // justify-content: center;
     // align-items: center;
+
+    // margin: 30px 0 0 0;
+    // justify-content: center;
     // margin: auto;
     // align-content: space-around;
   }
@@ -141,12 +144,13 @@ header {
     height: 300px;
     width: 23%;
     position: absolute;
-    right: 75vw;
+    // right: 75vw;
+    right: 29vw;
     top: 4vh;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     // margin: auto;
   }
 }
@@ -191,15 +195,17 @@ header {
 @keyframes handleOpen {
   from {
     left: -1450px;
+    // left: -2450px;
   }
   to {
-    left: -675px;
+    // left: -675px;
+    left: -925px;
   }
 }
 @keyframes handleClose {
   from {
     // visibility: visible;
-    left: -675px;
+    left: -925px;
   }
   to {
     left: -10000px;
