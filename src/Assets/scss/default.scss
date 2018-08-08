@@ -169,7 +169,14 @@ header {
 }
 
 @media (max-width: 426px) {
-  .haveP {
+  .haveP,
+  .needP {
+    display: none;
+  }
+}
+
+@media (max-width: 387px) {
+  .needP {
     display: none;
   }
 }

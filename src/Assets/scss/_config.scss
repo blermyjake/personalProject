@@ -59,11 +59,12 @@ a {
   color: white;
   // justify-content: center;
 }
-
-.haveText {
-  position: fixed;
-  bottom: 335px;
-  right: 0;
+.container-fluid-need {
+  height: 50vh;
+  line-height: 24px;
+  margin: -20px 0px 0px 0px;
+  color: white;
+  // justify-content: center;
 }
 
 #imgNeedTop {
@@ -97,12 +98,11 @@ a {
   // background: rgba(0, 0, 0, 0.5);
   width: 55%;
   // position: relative;
-  left: -15px;
+  // left: -15px;
 }
 .hHave {
   // position: relative;
   left: 15px;
-
   // text-shadow: 2px 2px #000;
   background-color: #060505;
   -webkit-background-clip: text;
@@ -112,16 +112,38 @@ a {
   text-shadow: rgb(1, 1, 1) 0px 2px 2px;
 }
 
-.needP {
+.needTop {
+  width: 55%;
+  // position: relative;
   text-align: center;
-  color: black;
-  width: 65%;
-  margin: auto;
-  left: 18%;
+  color: white;
+  left: -15px;
 }
 
-.needTop {
+.nNeedd {
+  color: transparent;
+  font-size: 37px;
+}
+#nNeed {
+  width: 54%;
+  background-color: #060505;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: rgb(1, 1, 1) 3px 3px 2px;
+}
+
+.needP {
   text-align: center;
+  // text-indent: 50px;
+  margin: auto;
+  // padding: 0 0 12px 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  // position: absolute;
+  width: 85%;
+  // position: relative;
+  left: 8%;
 }
 
 .haveP {
@@ -206,16 +228,16 @@ a {
   margin: 0 -8px 0 -15px;
 }
 
-.needDiv {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding: auto;
-}
 .haveDiv {
   display: flex;
   justify-content: center;
   margin: 240px 0 0 0;
+  padding: auto;
+}
+.needDiv {
+  display: flex;
+  justify-content: center;
+  margin: 200px 0 0 0;
   padding: auto;
 }
 

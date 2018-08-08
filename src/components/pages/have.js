@@ -11,7 +11,6 @@ class Have extends Component {
   render() {
     return (
       <div id="imgHave" className="container-fluid">
-        {/* <div className="haveText"> */}
         <div className="haveTop">
           <h1 className="hHave">Get Involved</h1>
           <h3 className="hHave">Inspire change</h3>

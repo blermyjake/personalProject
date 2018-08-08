@@ -18,10 +18,11 @@ class Need extends Component {
       // component={Clothing}
       // component={Help}
       <div id="imgNeedTop" className="container-fluid">
-        <div className="haveTop">
-          <h1 className="hHave">I Need</h1>
+        <div className="needTop">
+          <h1 className="nNeedd">I Need</h1>
+          <h1 id="nNeed">I Need</h1>
         </div>
-        <div className="haveDiv">
+        <div className="needDiv">
           <button className="button">
             <Link to="/need/shelter">Shelter</Link>
           </button>
@@ -38,8 +39,8 @@ class Need extends Component {
             <Link to="/need/help">Help</Link>
           </button>
         </div>
-        <div className="testDiv">
-          <p className="haveP">
+        <div className="testNeedDiv">
+          <p className="needP">
             There are many places to get help in the Dallas area. Whatever your
             needs are, there's a place ready to help. Click through to find the
             right place for you.
