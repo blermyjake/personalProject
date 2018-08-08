@@ -175,6 +175,7 @@ a {
 .container-fluid4 {
   margin: 15px;
 }
+
 .container-fluid5 {
   // margin: 15px;
   height: 50vh;
@@ -192,10 +193,48 @@ a {
   // display: block;
 }
 
+.container-fluid-home {
+  display: block;
+  // flex-direction: column;
+  // flex-wrap: nowrap;
+  // justify-content: flex-start;
+  // align-items: stretch;
+  // align-content: stretch;
+}
+#mainImg {
+  background-image: url("../../components/pages/main-right.png");
+  // position: relative;
+  // height: 46vh;
+  // width: 100%;
+  // background-size: 100%;
+  // width: 100%;
+  // background-repeat: no-repeat;
+  // background-position: center 0;
+  // position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  margin: 0px 0px 0px -1px;
+}
+
+.mainH1 {
+  width: 54%;
+  text-align: center;
+  background-color: #060505;
+  -webkit-background-clip: text;
+  background-clip: text;
+  // text-shadow: #010101 3px 3px 2px;
+}
+
+.mainP {
+  margin: 20px 0 0px 0;
+}
+
 .homePDiv {
   // margin: 10px 10px 10px 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  // margin-right: auto;
   display: block;
   justify-content: center;
   width: 75%;
@@ -209,9 +248,11 @@ a {
   align-items: center;
   align-content: stretch;
 }
-.pAboutDiv {
-  // display: block;
-}
+
+// .pAboutDiv {
+//  display: block;
+// }
+
 .pAbout {
   // display: block;
   // margin: 250px 0 0 50px;

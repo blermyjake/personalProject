@@ -5,7 +5,7 @@ class ClothingMap extends Component {
   render() {
     const url = `https://www.google.com/maps/embed/v1/search?key=${
       process.env.REACT_APP_API_KEY
-    }&zoom=12&q=homeless+donations`;
+    }&zoom=11&q=homeless+donations`;
 
     return (
       <div className="mapMainDiv">

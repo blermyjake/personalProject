@@ -5,7 +5,7 @@ class FoodMap extends Component {
   render() {
     const url = `https://www.google.com/maps/embed/v1/search?key=${
       process.env.REACT_APP_API_KEY
-    }&zoom=13&q=homeless+food+Dallas`;
+    }&zoom=12&q=homeless+food+dallas`;
 
     return (
       <div className="mapMainDiv">
