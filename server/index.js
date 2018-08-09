@@ -13,6 +13,7 @@ const port = 4000;
 // process.env.PORT ||
 const app = express();
 
+app.use(express.static(`${__dirname}/../build`));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -113,6 +114,11 @@ app.get("/api/userData/:id", controller.getMyData);
 
 app.get("/api/userData/hello/:id", controller.getUniqueData);
 // app.get("/api/weather/", controller.getMeWeather);
+
+const path = require("path");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
