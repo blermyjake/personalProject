@@ -55,30 +55,18 @@ header {
     display: block;
     cursor: pointer;
   }
-  // ul {
-  // display: none;
-  // width: 100%;
-  // text-align: left;
-  // }
-  // #toggle:checked + ul {
-  //   display: flex;
-  //   flex-direction: column;
-  //   position: fixed;
-  //   right: 31vw;
-  //   top: 77px;
-  // }
 
   .header-links {
-    font-size: 35px;
+    font-size: 33px;
   }
   .drop-down-menu {
-    width: 100vh;
-    height: 46vh;
+    width: 104vw;
+    height: 50vh;
     background: #93bcc1;
     opacity: 0.95;
     position: absolute;
     // left: -675px;
-    left: -340px;
+    left: -99vw;
     // z-index: 100;
 
     display: flex;
@@ -99,15 +87,18 @@ header {
   }
 
   .ulStyle {
-    height: 300px;
-    width: 23%;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    // height: 300px;
+    // width: 180px;
+    // position: absolute;
     // right: 75vw;
-    right: 33vw;
+    // right: 28vw;
     // top: 4vh;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
 
     // margin: 30px 0 0 0;
     // justify-content: center;
@@ -133,24 +124,28 @@ header {
   // li {
   //   margin-right: 0;
   //   display: block;
-  //   display: flex;
-  //   flex-direction: column;
+
   //   // border: 0.5px solid;
   // }
   // header {
   //   height: 30vh;
   // }
   .ulStyle {
-    height: 300px;
-    width: 23%;
-    position: absolute;
-    // right: 75vw;
-    right: 29vw;
-    top: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    // height: 300px;
+    // flex-direction: column;
+    // position: absolute;
+    // right: 29vw;
+    // width: 23%;
+    // right: 75vw;
+    // top: 4vh;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     // margin: auto;
   }
 }
@@ -177,11 +172,20 @@ header {
   .needP {
     display: none;
   }
+  .needDiv {
+    margin: 160px 0 0 0;
+  }
+  #nNeed {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 387px) {
   .needP {
     display: none;
+  }
+  #nNeed {
+    font-size: 8vw;
   }
 }
 
@@ -194,18 +198,18 @@ header {
 
 @keyframes handleOpen {
   from {
-    left: -1450px;
+    left: -10000px;
     // left: -2450px;
   }
   to {
     // left: -675px;
-    left: -925px;
+    left: -725px;
   }
 }
 @keyframes handleClose {
   from {
     // visibility: visible;
-    left: -925px;
+    left: -725px;
   }
   to {
     left: -10000px;

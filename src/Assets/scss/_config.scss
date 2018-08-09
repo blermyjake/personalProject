@@ -71,8 +71,8 @@ a {
   background-image: url("https://cdn-images-1.medium.com/max/1600/1*9tepH8WHB_M-mAbhU2xB8A.jpeg");
   background-size: cover;
   width: 100%;
-  background-repeat: no;
-  background-position: center 0;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 #imgHave {
@@ -122,7 +122,7 @@ a {
 
 .nNeedd {
   color: transparent;
-  font-size: 37px;
+  font-size: 0px;
 }
 #nNeed {
   width: 54%;
@@ -272,13 +272,13 @@ a {
 .haveDiv {
   display: flex;
   justify-content: center;
-  margin: 172px 0 0 0;
+  margin: 72px 0 0 0;
   padding: auto;
 }
 .needDiv {
   display: flex;
   justify-content: center;
-  margin: 136px 0 0 0;
+  margin: 73px 0 0 0;
   padding: auto;
 }
 
