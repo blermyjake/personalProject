@@ -13,6 +13,7 @@ const port = 4000;
 // process.env.PORT ||
 const app = express();
 
+console.log(`${__dirname}/../build`);
 app.use(express.static(`${__dirname}/../build`));
 app.use(bodyParser.json());
 app.use(cors());
