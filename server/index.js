@@ -9,8 +9,7 @@ const cors = require("cors");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
 
-const port = 4000;
-// process.env.PORT ||
+const port = process.env.PORT || 4000;
 const app = express();
 
 console.log(`${__dirname}/../build`);
