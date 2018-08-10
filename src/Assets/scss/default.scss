@@ -3,7 +3,7 @@
 header {
   position: relative;
   display: block;
-  width: 100%;
+  width: 95%;
   background: $darkGrey;
   color: $white;
   height: 100px;
@@ -153,27 +153,29 @@ header {
 @media (max-width: 528px) {
   .haveP {
     text-align: center;
-    margin: auto;
+    // margin: 0px 0px -15px 0px;
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    width: 100%;
+    width: 90%;
     left: 3%;
+    font-size: 3.5vw;
   }
 }
 
 @media (max-width: 446px) {
   .haveP {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 428px) {
   .haveP,
   .needP {
     display: none;
   }
-  .needDiv {
-    margin: 320px 0 0 0;
+  .buttonHave {
+    position: absolute;
+    bottom: 24vh;
   }
   #nNeed {
     font-size: 32px;

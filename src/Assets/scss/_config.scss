@@ -126,6 +126,7 @@ a {
 }
 #nNeed {
   width: 54%;
+  margin: 70px 0px 0px 0px;
   background-color: #060505;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -133,17 +134,30 @@ a {
   text-shadow: rgb(1, 1, 1) 3px 3px 2px;
 }
 
+.buttonNeed {
+  position: absolute;
+  bottom: 34vh;
+  /* right: 0vw; */
+  text-align: center;
+  width: 95vw;
+}
 .needP {
   text-align: center;
-  // text-indent: 50px;
   margin: auto;
-  // padding: 0 0 12px 0;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
-  // position: absolute;
-  width: 85%;
-  // position: relative;
-  left: 8%;
+  color: #fff;
+  position: relative;
+  bottom: -43vh;
+  justify-content: center;
+  width: 82vw;
+}
+
+.buttonHave {
+  position: absolute;
+  bottom: 34vh;
+  /* right: 0vw; */
+  text-align: center;
+  width: 95vw;
 }
 
 .haveP {
@@ -153,10 +167,11 @@ a {
   // padding: 0 0 12px 0;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  // position: absolute;
+  position: absolute;
+  bottom: 24vh;
   width: 85%;
   // position: relative;
-  left: 8%;
+  // left: 8%;
 }
 
 .haveN {
@@ -272,17 +287,19 @@ a {
   margin: 0 -8px 0 -15px;
 }
 
-.haveDiv {
-  display: flex;
-  justify-content: center;
-  margin: 320px 0 0 0;
-  padding: auto;
-}
+// .haveDiv {
+//   display: flex;
+//   justify-content: center;
+//   margin: 320px 0 0 0;
+//   padding: auto;
+// }
 .needDiv {
   display: flex;
   justify-content: center;
-  margin: 320px 0 0 0;
-  padding: auto;
+  position: sticky;
+  bottom: 196px;
+  // margin: 320px 0 0 0;
+  // padding: auto;
 }
 
 .userWelcome {

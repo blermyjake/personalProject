@@ -15,7 +15,7 @@ class Have extends Component {
           <h1 className="hHave">Get Involved</h1>
           <h3 className="hHave">Inspire change</h3>
         </div>
-        <div className="haveDiv">
+        <div className="buttonHave">
           <button className="button">
             <Link to="/have/heart">The Heart</Link>
           </button>
