@@ -32,15 +32,6 @@ label {
   display: none;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  color: $black;
-  font-weight: 400;
-  font-style: normal;
-  // min-width: 320px;
-}
-
 a {
   text-decoration: none;
   @include transition(0.4s ease-in-out);
@@ -156,7 +147,7 @@ a {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   position: relative;
-  bottom: -43vh;
+  bottom: -42vh;
   justify-content: center;
   width: 82vw;
 }
@@ -171,16 +162,13 @@ a {
 
 .haveP {
   text-align: center;
-  // text-indent: 50px;
   margin: auto;
-  // padding: 0 0 12px 0;
   background: rgba(0, 0, 0, 0.5);
-  color: white;
-  position: absolute;
-  bottom: 24vh;
-  width: 85%;
-  // position: relative;
-  // left: 8%;
+  color: #fff;
+  position: relative;
+  bottom: -43vh;
+  justify-content: center;
+  width: 82vw;
 }
 
 .haveN {

@@ -50,6 +50,15 @@ header {
   }
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: $black;
+  font-weight: 400;
+  font-style: normal;
+
+  // min-width: 320px;
+}
 @media (max-width: 675px) {
   label {
     display: block;
@@ -177,6 +186,11 @@ header {
     position: absolute;
     bottom: 24vh;
   }
+  .buttonNeed {
+    position: absolute;
+    bottom: 24vh;
+  }
+
   #nNeed {
     font-size: 32px;
   }
