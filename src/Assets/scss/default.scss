@@ -3,7 +3,7 @@
 header {
   position: relative;
   display: block;
-  width: 95%;
+  width: 100%;
   background: $darkGrey;
   color: $white;
   height: 100px;
@@ -61,7 +61,7 @@ header {
   }
   .drop-down-menu {
     width: 104vw;
-    height: 50vh;
+    // height: 50vh;
     background: #93bcc1;
     opacity: 0.95;
     position: absolute;

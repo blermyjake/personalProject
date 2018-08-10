@@ -66,6 +66,15 @@ a {
   color: white;
   // justify-content: center;
 }
+#mainImg {
+  background-image: url("../../components/pages/main-right.png");
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+
+  margin: 0px 0px 0px -1px;
+}
 
 #imgNeedTop {
   background-image: url("https://cdn-images-1.medium.com/max/1600/1*9tepH8WHB_M-mAbhU2xB8A.jpeg");
@@ -218,22 +227,6 @@ a {
   // justify-content: flex-start;
   // align-items: stretch;
   // align-content: stretch;
-}
-#mainImg {
-  background-image: url("../../components/pages/main-right.png");
-  // position: relative;
-  // height: 46vh;
-  // width: 100%;
-  // background-size: 100%;
-  // width: 100%;
-  // background-repeat: no-repeat;
-  // background-position: center 0;
-  // position: relative;
-  width: 100%;
-  background-attachment: fixed;
-  background-position: top center;
-  background-size: cover;
-  margin: 0px 0px 0px -1px;
 }
 
 .mainH1 {
