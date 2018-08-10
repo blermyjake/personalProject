@@ -70,15 +70,15 @@ a {
 #imgNeedTop {
   background-image: url("https://cdn-images-1.medium.com/max/1600/1*9tepH8WHB_M-mAbhU2xB8A.jpeg");
   background-size: cover;
-  width: 100%;
+  height: 70vh;
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: 100% 48%;
 }
 
 #imgHave {
   background-image: url("http://www.borgenmagazine.com/wp-content/uploads/2014/01/homeless.jpg");
   background-size: cover;
-  width: 100%;
+  height: 70vh;
   // height: auto;
   background-repeat: no-repeat;
   background-position: center 0;
@@ -87,11 +87,11 @@ a {
 
 #imgAbout {
   background-image: url("https://www.policyforum.net/wp-content/uploads/2017/09/Australia-could-end-homelessness-1800.jpg");
+  // background-size: cover;
+  height: 63vh;
   background-size: cover;
-  width: 100%;
-  // height: auto;
   background-repeat: no-repeat;
-  background-position: top 0 right 0;
+  background-position: 100% 88%;
 }
 
 .haveTop {
@@ -275,13 +275,13 @@ a {
 .haveDiv {
   display: flex;
   justify-content: center;
-  margin: 124px 0 0 0;
+  margin: 320px 0 0 0;
   padding: auto;
 }
 .needDiv {
   display: flex;
   justify-content: center;
-  margin: 124px 0 0 0;
+  margin: 320px 0 0 0;
   padding: auto;
 }
 
