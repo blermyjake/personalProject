@@ -217,6 +217,16 @@ a {
   // align-content: stretch;
 }
 
+.weather {
+  // text-align: right;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: stretch;
+}
+
 .mainH1 {
   width: 54%;
   text-align: center;

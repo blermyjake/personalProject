@@ -1,30 +1,43 @@
-// import React, { Component } from "react";
-// import axios from "axios";
+import React, { Component } from "react";
 
-// class Weather extends Component {
-//   componentDidMount() {
-//     this.getWeather();
-//   }
+class Weather extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      isLoaded: false
+    };
+  }
 
-//   getWeather = () => {
-//     console.log(process.env.REACT_APP_WEATHER_API_KEY);
-//     axios.get("/api/weather/").then(res => console.log(res));
-//   };
+  componentDidMount() {
+    fetch(
+      `http://dataservice.accuweather.com/forecasts/v1/daily/1day/75201?apikey=${
+        process.env.REACT_APP_ACCUWEATHER
+      }`
+    )
+      .then(res => res.json())
+      .then(json => {
+        console.log(json);
+        this.setState({
+          isLoaded: true,
+          weather: json.DailyForecasts[0].Temperature
+        });
+      });
+  }
 
-//   render() {
-//     return (
-//       <div>
-//         {/* <div id="weatherTop">
-//           <h2>Weather Now!</h2>
-//         </div> */}
+  render() {
+    const { isLoaded, weather } = this.state;
+    if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div className="weather">
+          <h4>Hi {weather.Maximum.Value} F</h4>
+          <h4>Lo {weather.Minimum.Value} F</h4>
+        </div>
+      );
+    }
+  }
+}
 
-//         <div id="localData">
-//           <h3>Dallas Weather</h3>
-//           <h4>Hours:Minutes</h4>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Weather;
+export default Weather;

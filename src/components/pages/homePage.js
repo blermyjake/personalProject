@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import main from "./main.jpg";
+import Weather from "./components/weather/weather";
 
 class HomePage extends Component {
   render() {
@@ -10,6 +11,7 @@ class HomePage extends Component {
           <img id="mainImg" src={require("./main-rightbw.jpg")} alt="" />
         </div>
         {/* <hr /> */}
+        <Weather />
 
         <div className="homePDiv">
           <h1 align="center">Helping Hands</h1>
