@@ -76,7 +76,7 @@ module.exports = {
   logout: (req, res) => {
     console.log("logged out");
     req.session.destroy(() => {
-      res.redirect("http://localhost:3000");
+      res.redirect(process.env.REACT_APP_CLIENT);
     });
   },
 
