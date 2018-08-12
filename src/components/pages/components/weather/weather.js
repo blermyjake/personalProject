@@ -32,8 +32,13 @@ class Weather extends Component {
     } else {
       return (
         <div className="weather">
-          <h4>Hi {weather.Maximum.Value} F</h4>
-          <h4>Lo {weather.Minimum.Value} F</h4>
+          <p className="weatherText">
+            {" "}
+            {/* Today's weather forecast in Dallas is a high of{" "} */}
+            {weather.Maximum.Value} °F | {""}
+            {weather.Minimum.Value}
+            °F
+          </p>
         </div>
       );
     }

@@ -58,7 +58,7 @@ a {
   // justify-content: center;
 }
 #mainImg {
-  background-image: url("../../components/pages/main-right.png");
+  // background-image: url("../../components/pages/main-right.png");
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
@@ -136,7 +136,7 @@ a {
 
 .buttonNeed {
   position: absolute;
-  bottom: 34vh;
+  bottom: 35vh;
   /* right: 0vw; */
   text-align: center;
   width: 95vw;
@@ -154,7 +154,7 @@ a {
 
 .buttonHave {
   position: absolute;
-  bottom: 34vh;
+  bottom: 35vh;
   /* right: 0vw; */
   text-align: center;
   width: 95vw;
@@ -217,15 +217,15 @@ a {
   // align-content: stretch;
 }
 
-.weather {
-  // text-align: right;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-end;
-  align-content: stretch;
-}
+// .weather {
+//   // text-align: right;
+//   display: flex;
+//   flex-direction: column;
+//   flex-wrap: nowrap;
+//   justify-content: flex-start;
+//   align-items: flex-end;
+//   align-content: stretch;
+// }
 
 .mainH1 {
   width: 54%;

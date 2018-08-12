@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import main from "./main.jpg";
-import Weather from "./components/weather/weather";
+import Weather from "./components/weather/Weather";
+import Widget from "./components/weather/Widget";
 
 class HomePage extends Component {
   render() {
@@ -9,12 +10,16 @@ class HomePage extends Component {
         <div className="homeTop">
           {/* <h1 className="mainH1">Helping Hands</h1> */}
           <img id="mainImg" src={require("./main-rightbw.jpg")} alt="" />
+          <p className="widPos">
+            <Widget />{" "}
+          </p>
         </div>
         {/* <hr /> */}
-        <Weather />
+        {/* <Weather /> */}
 
         <div className="homePDiv">
           <h1 align="center">Helping Hands</h1>
+
           <p className="mainP">
             Homelessness affects men, women, and children of all races and
             ethnicities. In the United States, approximately 3 million persons,
