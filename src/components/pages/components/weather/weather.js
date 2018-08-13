@@ -5,6 +5,7 @@ class Weather extends Component {
     super(props);
     this.state = {
       items: [],
+      weather: {},
       isLoaded: false
     };
   }
