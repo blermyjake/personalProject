@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import main from "./main.jpg";
 // import Weather from "./components/Weather/Weather";
-import Widget from "./components/Weather/Widget";
+import Widget from "./Weather/Widget";
 
 class HomePage extends Component {
   render() {
