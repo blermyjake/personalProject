@@ -22,7 +22,9 @@ export default class Dashboard extends Component {
   }
 
   getRequest() {
-    axios.get("http://localhost:4000/api/centers").then(res => {
+    console.log(process.env);
+    axios.get(process.env.REACT_APP_CENTERS).then(res => {
+      console.log(res);
       this.setState({ allCenters: res.data });
     });
   }
