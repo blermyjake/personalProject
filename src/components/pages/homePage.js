@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import main from "./main.jpg";
-import Weather from "./components/weather/Weather";
+// import Weather from "./components/weather/Weather";
 import Widget from "./components/weather/Widget";
 
 class HomePage extends Component {
