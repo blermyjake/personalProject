@@ -10,7 +10,6 @@ class Header extends Component {
     };
   }
   render() {
-    // console.log(process.env.REACT_APP_LOGIN)
     return (
       <div>
         <header>
