@@ -109,8 +109,8 @@ app.get("/api/getUser", controller.getUser);
 
 app.post("/api/userData", controller.addCenter);
 app.put("/api/userData/:id", controller.updateUser);
-app.delete("/api/userData/:id", controller.deleteUserData);
 app.get("/api/userData/:id", controller.getMyData);
+app.delete("/api/userData/:id", controller.deleteUserData);
 
 app.get("/api/userData/hello/:id", controller.getUniqueData);
 // app.get("/api/weather/", controller.getMeWeather);

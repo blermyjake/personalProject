@@ -54,10 +54,6 @@ class User extends Component {
       .catch(err => console.log(err));
   };
 
-  // logout = () => {
-  //     axios.post(process.env.REACT_APP_LOGOUT)
-  // }
-
   deleteUserData = id => {
     axios
       .delete(`/api/userData/${id}`)
@@ -74,7 +70,7 @@ class User extends Component {
     return (
       <div className="container-fluid4">
         <h1 className="userWelcome">Welcome {this.state.name}</h1>
-        <a href={process.env.REACT_APP_LOGOUT}>Logout</a>
+        <a href={process.env.REACT_APP_LOGOUT} />
         <hr />
 
         <UpdateUser userId={this.state.userId} getMyData={this.getMyData} />

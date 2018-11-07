@@ -1,31 +1,29 @@
-import React, { Component } from 'react';
-import Need from '../../need';
-import Dashboard from '../../../table/dashboard';
-import FoodMap from '../maps/FoodMap';
+import React, { Component } from "react";
+import Need from "../../need";
+import Dashboard from "../../../table/dashboard";
+import FoodMap from "../maps/FoodMap";
 
 class Food extends Component {
-    render() {
-        // console.log(Dashboard);
-        return (
-            <div className="haveMain">
+  render() {
+    return (
+      <div className="haveMain">
+        <Need />
 
-            <Need />
+        <div className="container-fluid2">
+          <h1>Food</h1>
+          <hr />
 
-            <div className="container-fluid2">
-                <h1>Food</h1>
-                <hr/>
-            
-                <div>
-                    <FoodMap/>
-                </div>
-            </div>
-                
-            <div className="container-fluid3">
-                  <Dashboard />
-               </div>
-            </div>
-        );
-    }
+          <div>
+            <FoodMap />
+          </div>
+        </div>
+
+        <div className="container-fluid3">
+          <Dashboard />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Food;
