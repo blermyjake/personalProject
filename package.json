@@ -20,7 +20,7 @@
     "passport-auth0": "^1.0.0",
     "rc-checkbox": "^2.1.5",
     "react": "^16.4.1",
-    "react-dev-utils": "^5.0.2",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.4.2",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.3.1",
